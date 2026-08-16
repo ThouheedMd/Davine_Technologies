@@ -1,0 +1,98 @@
+WEEK 1 - LINUX COMMANDS
+
+========================================
+1. BASIC LINUX COMMANDS
+========================================
+
+pwd
+Shows the current working directory.
+
+ls
+Lists files and directories.
+
+ls -la
+Lists all files, including hidden files, with detailed information.
+
+whoami
+Displays the currently logged-in user.
+
+uname -a
+Displays Linux system and kernel information.
+
+date
+Displays the current date and time.
+
+========================================
+2. USERS AND GROUPS
+========================================
+
+sudo groupadd developers
+Creates a new group named developers.
+
+sudo useradd user1
+Creates a user named user1.
+
+sudo useradd user2
+Creates a user named user2.
+
+sudo usermod -aG developers user1
+Adds user1 to the developers group.
+
+sudo usermod -aG developers user2
+Adds user2 to the developers group.
+
+getent group developers
+Displays information about the developers group.
+
+========================================
+3. DIRECTORIES AND FILES
+========================================
+
+mkdir -p ~/DevOps/{Projects,Scripts,Logs,Backup}
+Creates the DevOps directory and its subdirectories.
+
+touch ~/DevOps/Projects/demo.txt
+Creates a demo.txt file inside the Projects directory.
+
+tree ~/DevOps
+Displays the DevOps directory structure.
+
+ls -l ~/DevOps
+Displays detailed information about the DevOps directory.
+
+========================================
+4. FILE PERMISSIONS
+========================================
+
+chmod 755 ~/DevOps
+Changes the permissions of the DevOps directory.
+
+ls -l ~/DevOps
+Checks the permissions and ownership information.
+
+========================================
+5. NETWORKING COMMANDS
+========================================
+
+hostname
+Displays the hostname of the Ubuntu system.
+
+hostnamectl
+Displays detailed hostname and system information.
+
+ip addr
+Displays network interfaces and IP addresses.
+
+ping -c 4 google.com
+Tests network connectivity by sending four ping requests.
+
+========================================
+DIRECTORY STRUCTURE CREATED
+========================================
+
+DevOps/
+├── Projects/
+│   └── demo.txt
+├── Scripts/
+├── Logs/
+└── Backup/
