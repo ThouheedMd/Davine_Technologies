@@ -43,4 +43,6 @@ inventory,playbooks, modules and Terraform + Ansible workflow for provisioning a
     Jenkins, CI/CD & GitHub Integration
 - Week-06 -> 
     Infrastructure as Code & Configuration Management
+- Week-07 ->
+    Kubernetes & Container Orchestration
 - README.md
