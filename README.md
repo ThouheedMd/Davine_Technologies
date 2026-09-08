@@ -29,6 +29,10 @@ pipeline stages, GitHub integration,webhooks, build triggers, automation and pip
 Infrastructure as Code concepts, Terraform fundamentals, providers, variables, outputs, state, modules, Ansible fundamentals, 
 inventory,playbooks, modules and Terraform + Ansible workflow for provisioning and configuration management.
 
+### Week 07 - Kubernetes & Container Orchestration
+Kubernetes fundamentals, Pods, Deployments, Services, ConfigMaps, Secrets, 
+Namespaces, Kubectl commands, Helm basics, and Ingress introduction.
+
 ## Repository Structure
 
 - Week-01 -> 
