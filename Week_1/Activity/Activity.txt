@@ -1,0 +1,15 @@
+ Create a DevOps directory.
+ Inside it, create:
+    o Projects
+    o Scripts
+    o Logs
+    o Backup
+ Create sample files inside each folder.
+ Create two Linux users and one group named developers.
+ Add both users to the developers group.
+ Assign appropriate file permissions.
+ Configure your system hostname.
+ Verify internet connectivity using the ping command.
+ Display your IP address and system information.
+ Compress the DevOps directory into a ZIP or TAR file.
+ Document each step performed. 

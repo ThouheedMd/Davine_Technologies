@@ -1,0 +1,25 @@
+ Install Ubuntu using VirtualBox, VMware, or WSL.
+ Explore the Linux File System.
+ Create and manage users and groups.
+ Practice file and directory management.
+ Configure file permissions and ownership.
+ Install and update packages using the package manager.
+ Monitor running processes.
+ Configure environment variables.
+ Practice networking commands such as:
+ hostname
+ hostnamectl
+ ip addr
+ ping
+ ifconfig
+ Connect to a system using SSH (if available).
+ Prepare a short PDF explaining:
+ Linux Fundamentals
+ Linux File System
+ Users & Groups
+ File Permissions
+ Package Management
+ Environment Variables
+ Basic Networking
+ SSH
+ 20 Common Linux Commands 

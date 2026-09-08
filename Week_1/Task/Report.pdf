@@ -1,0 +1,48 @@
+DevOps Internship - Week 1 Report
+
+Introduction
+This week I learned the basics of Linux and practiced using Ubuntu. I explored the Linux terminal,
+worked with files and directories, learned how users and groups are managed, and understood why
+Linux is important in DevOps.
+
+-> Linux Fundamentals
+Linux is an open-source operating system known for stability, security and flexibility. It is widely
+used for servers, cloud platforms and DevOps automation.
+
+-> Linux File System
+Linux stores everything in a hierarchical structure starting from the root directory (/). Important
+directories include /home for user files, /etc for configuration, /var for logs and /usr for installed
+programs.
+
+-> Users and Groups
+Linux supports multiple users. Groups help manage permissions for several users at once. I
+learned to create users, groups and assign users to groups.
+
+-> File Permissions
+Each file has read, write and execute permissions for the owner, group and others. Commands like
+chmod and chown are used to manage access.
+
+-> Package Management
+Ubuntu uses the APT package manager. I practiced updating packages and installing software
+using sudo apt update, sudo apt upgrade and sudo apt install.
+
+-> Environment Variables
+Environment variables store system settings. I learned to view them with printenv and create
+temporary variables using export.
+
+-> Basic Networking
+I practiced hostname, hostnamectl, ip addr, ping and ifconfig to view system information and test
+connectivity.
+
+-> SSH
+SSH is used for secure remote access to Linux systems. It allows administrators to manage servers
+safely over a network.
+
+-> 20 Common Linux Commands
+pwd, ls, cd, mkdir, rmdir, touch, cp, mv, rm, cat, nano, grep, find, chmod, chown, ps, top, df -h, du
+-sh, uname -a.
+
+-> Conclusion
+This week's activities improved my confidence in using Linux. I understand the basic commands,
+file system, permissions, users, networking and package management, which will help me in
+upcoming DevOps topics such as Docker, Jenkins and Kubernete
