@@ -1,0 +1,33 @@
+DevOps Internship - Week 2 Report
+
+-> Introduction
+During Week 2 I learned Git and GitHub by creating repositories, committing files and working with
+branches.
+
+-> Git
+Git is a distributed version control system that tracks changes and maintains project history.
+
+-> GitHub
+GitHub hosts Git repositories online and enables collaboration.
+
+-> Git Workflow
+I created a repository, cloned it, added files, committed changes and pushed them to GitHub.
+
+-> Branching and Merge
+I created feature branches and merged them into the main branch after completing my work.
+
+-> Rebase
+Rebase creates a cleaner commit history by replaying commits onto another branch.
+
+-> Pull Requests
+Pull Requests are used for reviewing and merging changes.
+
+-> README.md
+README.md explains the project and provides useful information.
+
+-> .gitignore
+.gitignore excludes unnecessary files from version control.
+
+-> Conclusion
+This week's tasks improved my understanding of version control and collaboration using Git and
+GitHub.

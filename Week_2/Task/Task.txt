@@ -1,0 +1,18 @@
+➢ Install Git on your system.
+➢ Configure Git with your username and email.
+➢ Create a GitHub account (if you don't have one).
+➢ Create a new GitHub repository.
+➢ Clone the repository to your local machine.
+➢ Add sample project files and commit your changes.
+➢ Push the repository to GitHub.
+➢ Create a new branch and make changes.
+➢ Merge the branch into the main branch.
+➢ Create a professional README.md file.
+➢ Configure a .gitignore file.
+➢ Prepare a short PDF explaining:
+o Git, GitHub, Git Workflow
+o Branching, Merge
+o Rebase
+o Pull Requests
+o README.md
+o .gitignore 

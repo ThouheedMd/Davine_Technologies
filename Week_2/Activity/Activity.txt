@@ -1,0 +1,9 @@
+➢ Create a repository named DevOps-Week 02
+➢ Add at least five project files.
+➢ Create two feature branches.
+➢ Make different changes in each branch.
+➢ Merge both branches into the main branch.
+➢ Create a Pull Request (PR).
+➢ Resolve one merge conflict (if possible).
+➢ Update the README.md with project details.
+➢ Push the final project to GitHub. .
