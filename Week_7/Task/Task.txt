@@ -1,0 +1,12 @@
+➢ Install Minikube or Kind.
+➢ Start a local Kubernetes cluster.
+➢ Create and manage Pods.
+➢ Create a Deployment for a sample application.
+➢ Scale the Deployment to multiple replicas.
+➢ Create a Service to expose the application.
+➢ Create a ConfigMap.
+➢ Create a Secret.
+➢ Create a Namespace.
+➢ Practice important kubectl commands.
+➢ Explore basic Helm concepts.
+➢ Explore basic Ingress concepts. 

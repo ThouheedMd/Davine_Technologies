@@ -1,0 +1,10 @@
+➢ Deploy the application using a Deployment.
+➢ Run at least 3 replicas.
+➢ Expose the application using a Service.
+➢ Scale the application up and down.
+➢ Perform a rolling update by changing the application version.
+➢ Check the status of the rollout.
+➢ Roll back the Deployment to the previous version.
+➢ Use a separate Namespace for the application.
+➢ Draw the deployment flow:
+User → Service → Deployment → Pods → Container
