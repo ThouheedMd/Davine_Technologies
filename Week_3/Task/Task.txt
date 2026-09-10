@@ -1,0 +1,17 @@
+➢ Write a Bash script to display system information.
+➢ Create a script to automate file backups.
+➢ Develop a script to create users and directories.
+➢ Write a script to clean old log files.
+➢ Schedule a Bash script using Cron.
+➢ Install Apache or Nginx on your Linux system.
+➢ Host a simple HTML webpage.
+➢ Verify that the website is accessible through your browser.
+➢ Prepare a short PDF explaining:
+o Shell Scripting
+o Variables
+o Loops
+o Functions
+o Cron Jobs
+o Apache
+o Nginx
+o Log Management 

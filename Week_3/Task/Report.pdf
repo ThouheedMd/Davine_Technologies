@@ -1,0 +1,84 @@
+DevOps Internship - Week 3 Report
+
+Topic : Shell Scripting, Automation & Web Servers
+
+-> System Information Script
+A Bash script was used to display basic information about the Ubuntu system. The script collects
+information such as the current user, hostname, operating system/kernel, date and time, IP information, disk
+usage, and memory usage.
+Example commands used
+chmod +x system_info.sh
+./system_info.sh
+
+-> Automated Backup
+A Bash backup script was prepared to automate the backup process. The activity creates a backup
+directory, copies the project files, and compresses the backup into a .tar.gz archive. The generated archive
+provides a single file that can be stored or transferred.
+Backup flow
+Project files → Backup directory → Compressed .tar.gz archive
+
+-> User and Directory Automation
+A script to create users and directories. This reduces repetitive manual
+work when setting up a project environment. The directory structure used for the internship includes project,
+script, log, and backup locations.
+Example directory structure
+DevOps/
+■■■ Projects/
+■■■ Scripts/
+■■■ Logs/
+■■■ Backup/
+
+-> log cleanup
+A separate Bash script is used for the required log-management exercise. Its purpose is to identify old log
+files and remove them according to the selected retention condition. The script should be tested carefully so
+that only intended files are removed.
+These two activities demonstrate how Bash can be used to automate common Linux administration tasks.
+
+-> Cron Job Automation
+Cron was used to schedule the backup script. Instead of running the backup manually, a Cron entry can
+execute the script at a defined time or interval. The Cron configuration was checked using crontab -l and the
+Cron service status was verified.
+Verification commands
+crontab -l
+sudo systemctl status cron --no-pager
+
+-> Apache Web Server
+Apache was selected for the web server activity. The server was installed on Ubuntu and used to host a
+simple HTML page. After deployment, the Apache service status and port 80 were checked.
+Typical verification commands
+sudo systemctl status apache2 --no-pager
+ss -tuln | grep ':80'
+
+-> Concepts Covered
+---Shell Scripting---
+Shell scripting is a way to place Linux commands into a script so that a sequence of operations can be
+repeated consistently. In this week's work, Bash scripts were used for system information, backups, user
+and directory creation, and log cleanup.
+---Variables---
+Variables store values that a script can use later. They are useful for paths, filenames, dates, user input,
+and configuration values.
+---Loops---
+Loops repeat a set of commands. They are useful when the same operation needs to be performed for
+multiple files, directories, or values.
+---Functions---
+Functions group related commands into reusable sections. This can make a Bash script easier to read,
+maintain, and test.
+---Cron Jobs---
+Cron provides scheduled execution of commands or scripts. It is useful for recurring tasks such as backups.
+
+-> Apache, Nginx and Log Management
+---Apache---
+Apache is a web server used to serve web content over HTTP/HTTPS. It was used for the practical website
+deployment in this week's activity.
+---Nginx---
+Nginx is another web server that can serve static content and also act as a reverse proxy. The official
+assignment asks for understanding of both Apache and Nginx, while allowing either Apache or Nginx for the
+practical installation.
+---Log Management---
+Log management involves monitoring, reviewing, retaining, and cleaning log files. The Week 3 log-cleanup
+script demonstrates how an administrator can automate part of this process.
+
+-> Conclusion
+This week provided practical experience with Bash scripting, Linux automation, Cron scheduling, and web
+server deployment. The activities showed how repetitive Linux tasks can be converted into scripts and
+scheduled instead of being performed manually each time.
