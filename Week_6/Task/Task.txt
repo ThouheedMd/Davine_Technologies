@@ -1,0 +1,25 @@
+➢ Install Terraform and Ansible.
+➢ Configure a Terraform provider.
+➢ Create a basic Terraform configuration.
+➢ Use variables and outputs.
+➢ Practice:
+o terraform init
+o terraform plan
+o terraform apply
+o terraform destroy
+➢ Understand Terraform state.
+➢ Create a basic Ansible inventory.
+➢ Create an Ansible Playbook.
+➢ Use Ansible to:
+o Install a package Create a user Start a service
+➢ Document the difference between Terraform and Ansible.
+➢ Prepare a short PDF explaining:
+o Infrastructure as Code
+o Terraform
+o Terraform State
+o Variables & Outputs
+o Modules
+o Ansible
+o Inventory
+o Playbooks
+o Terraform vs Ansible

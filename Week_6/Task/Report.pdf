@@ -1,0 +1,41 @@
+DevOps Internship - Week 6 Report
+
+Topic :   Infrastructure as Code & Configuration Management
+
+-> Introduction
+This week’s focus was on automating infrastructure creation and configuration
+using Terraform and Ansible. Instead of manually setting up servers, I learned how to define
+them as code — a crucial step toward scalable, repeatable DevOps environments.
+
+-> Tools & Concepts
+Purpose Infrastructure as Code Automate infrastructure setup through code Terraform
+Provision cloud resources Ansible Configure and manage servers Variables & Outputs Make
+configurations dynamic and reusable Terraform StateTrack resource changes Modules
+Enable modular, maintainable IaC Playbooks & Inventory Define tasks and target hosts
+
+-> Practical Implementation
+Terraform Installed Terraform and configured AWS provider.Created a .tf file defining an EC2
+instance.
+Executed:
+    terraform init
+    terraform plan
+    terraform apply
+    terraform destroy
+Verified infrastructure creation and destruction using state files.Ansible Installed Ansible and
+created an inventory file.Developed a playbook to:Install Apache and required packages
+Create a user deploy Start the web service Deploy sample web content
+
+-> Workflow Diagram
+Terraform → Infrastructure → Ansible → Server Configuration → ApplicationThis sequence
+shows how Terraform provisions the environment and Ansible configures it automatically,
+ensuring consistency and eliminating manual errors.
+
+-> Key Learnings
+Terraform handles provisioning, Ansible handles configuration.Always run terraform plan
+before terraform apply.Modular IaC improves reusability and reduces maintenance.AI
+assistants like Microsoft Copilot help generate, review, and optimize IaC code.
+
+-> Conclusion
+This week deepened my understanding of automation in DevOps. Combining Terraform and
+Ansible demonstrated how declarative infrastructure and consistent configuration create
+reliable cloud environments. These skills are vital for my growth as an DevOps Engineer

@@ -21,12 +21,6 @@ Project files → Backup directory → Compressed .tar.gz archive
 A script to create users and directories. This reduces repetitive manual
 work when setting up a project environment. The directory structure used for the internship includes project,
 script, log, and backup locations.
-Example directory structure
-DevOps/
-■■■ Projects/
-■■■ Scripts/
-■■■ Logs/
-■■■ Backup/
 
 -> log cleanup
 A separate Bash script is used for the required log-management exercise. Its purpose is to identify old log

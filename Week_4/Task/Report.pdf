@@ -8,7 +8,6 @@ installation, images, containers, Docker Hub, Dockerfile, volumes, networks, env
 mapping, multi-container applications and Docker best practices. The main learning approach is to
 understand how containers work and practice managing them.
 
-
 -> What is Docker?
 Docker is a containerization platform used to package applications and their dependencies into portable
 and consistent containers. Containerization makes applications easier to run across different
