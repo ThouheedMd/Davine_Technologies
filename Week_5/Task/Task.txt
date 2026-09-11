@@ -1,0 +1,21 @@
+➢ Install and configure Jenkins.
+➢ Explore the Jenkins Dashboard.
+➢ Connect Jenkins with GitHub.
+➢ Configure Jenkins Credentials securely.
+➢ Create a Freestyle Project that pulls code from GitHub.
+➢ Configure an automated build trigger.
+➢ Create a Declarative Pipeline.
+➢ Write a Jenkinsfile.
+➢ Create pipeline stages for:
+o Checkout o Build o Test
+➢ Execute the pipeline and analyze the build logs.
+➢ Configure basic GitHub Webhook integration.
+➢ Prepare a short PDF explaining:
+o CI/CD
+o Jenkins Architecture
+o Freestyle Jobs
+o Declarative Pipelines
+o Jenkinsfile
+o GitHub Webhooks
+o Jenkins Credentials
+o Pipeline Stages

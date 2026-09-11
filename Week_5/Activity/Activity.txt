@@ -1,0 +1,15 @@
+➢ Create a GitHub repository for the application.
+➢ Connect the repository with Jenkins.
+➢ Configure a GitHub Webhook.
+➢ Create a Jenkins Pipeline with separate stages:
+o Checkout
+o Build
+o Test
+o Validation
+➢ Push a new change to GitHub.
+➢ Verify that Jenkins automatically starts the pipeline.
+➢ Introduce a controlled error into the project.
+➢ Observe the failed Jenkins build.
+➢ Analyze the Console Output to identify the issue.
+➢ Fix the error and run the pipeline again.
+➢ Document the complete failure → troubleshooting → resolution process. 

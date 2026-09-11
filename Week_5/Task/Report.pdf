@@ -1,0 +1,88 @@
+DevOps Internship - Week 5 Report
+
+Topic :  Jenkins, CI/CD & GitHub Integration
+
+-> Introduction
+Week 5 focuses on Jenkins, CI/CD and GitHub Integration. The learning areas include Jenkins
+fundamentals and architecture, installation and configuration, jobs and builds, credentials, GitHub
+integration, Freestyle Projects, Declarative Pipelines, Jenkinsfile, pipeline stages, build triggers, GitHub
+Webhooks, build and test automation, troubleshooting and CI/CD best practices. The learning approach
+emphasizes understanding how code moves through a CI/CD pipeline and using AI as an assistant
+rather than a replacement for understanding.
+
+-> Objectives
+The objectives of this week were to understand Jenkins and CI/CD concepts, install and configure
+Jenkins, connect Jenkins with GitHub, configure credentials securely, create Jenkins jobs and pipelines,
+automate builds, analyze build logs and understand how webhooks can trigger automated workflows.
+
+-> What is CI/CD?
+CI/CD is a core DevOps practice that automates software delivery. In a CI pipeline, code changes are
+validated continuously through automated stages such as checkout, build and testing. Jenkins is used to
+help teams build, test and validate applications continuously.
+
+-> Jenkins Architecture
+Jenkins is an automation server used to create and execute build and CI/CD workflows. Users configure
+jobs or pipelines through Jenkins, and Jenkins executes the configured stages. During troubleshooting,
+Jenkins Console Output is useful for understanding why a build failed.
+
+-> Jenkins Installation and Configuration
+The weekly task requires installing and configuring Jenkins and exploring the Jenkins Dashboard. After
+installation, Jenkins should be configured for the required jobs and pipeline activities.
+
+-> Jenkins Jobs and Freestyle Projects
+A Jenkins job defines work that Jenkins should perform. The weekly task requires creating a Freestyle
+Project that pulls application code from GitHub. Freestyle Projects provide a simple way to configure
+source code, build steps and triggers through the Jenkins interface.
+
+-> Jenkins Credentials
+Jenkins Credentials are used to securely manage information required for integrations and access. The
+weekly task specifically requires configuring Jenkins Credentials securely before connecting Jenkins
+workflows with external services such as GitHub.
+
+-> GitHub Integration
+Jenkins can be connected with a GitHub repository so that Jenkins can retrieve application code and
+perform automated validation. The Week 5 task requires connecting Jenkins with GitHub and creating a
+project that pulls code from GitHub.
+
+-> Declarative Pipeline
+A Declarative Pipeline defines an automated workflow using clearly organized stages. The weekly task
+requires creating a Declarative Pipeline and executing it while analyzing the build logs.
+
+-> Jenkinsfile
+A Jenkinsfile stores the pipeline definition as code. The assignment requires writing a Jenkinsfile and
+understanding every stage of the pipeline. This allows the CI workflow to be maintained together with the
+application project.
+
+-> Pipeline Stages
+The weekly task requires pipeline stages for Checkout, Build and Test. The hands-on activity additionally
+requires a Validation stage. Separating the pipeline into stages makes it easier to understand where a
+failure occurs and to analyze the results.
+
+-> GitHub Webhooks
+A GitHub Webhook can notify Jenkins when changes occur in a repository. The weekly task requires
+basic GitHub Webhook integration, while the hands-on activity requires pushing a new change and
+verifying that Jenkins automatically starts the pipeline.
+
+-> Hands-on CI Pipeline
+The hands-on scenario is based on developers continuously pushing code to GitHub while a Junior
+DevOps Engineer creates a CI pipeline to automatically validate every change. The required pipeline
+stages are Checkout, Build, Test and Validation. The repository is connected to Jenkins and a GitHub
+Webhook is configured to trigger automated pipeline execution.
+
+-> Failure and Troubleshooting
+The hands-on activity requires introducing a controlled error into the project, observing the failed Jenkins
+build, analyzing the Console Output, identifying the issue, fixing it and running the pipeline again. The
+complete failure, troubleshooting and resolution process should be documented.
+
+-> Testing and Verification
+The Jenkins installation and dashboard should be verified. GitHub integration and credentials should be
+checked, and the pipeline should be executed through its stages. A GitHub change should trigger an
+automated build through the configured webhook. Both failed and successful pipeline runs should be
+observed, and the Console Output should be reviewed to identify the root cause of failures.
+
+-> Conclusion
+Week 5 provided practical exposure to Jenkins, CI/CD automation and GitHub integration. The work
+demonstrated how code changes can move through automated pipeline stages and how Jenkins can
+provide useful feedback when builds fail. The troubleshooting activity also emphasized reading logs,
+identifying root causes, fixing issues and verifying the pipeline again. These activities support the
+DevOps mindset of automating, troubleshooting and improving delivery workflows.
