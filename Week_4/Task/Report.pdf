@@ -1,0 +1,65 @@
+DevOps Internship - Week 4 Report
+
+Topic : Docker & Docker Compose
+
+-> Introduction
+Week 4 focuses on Docker and Docker Compose. The internship document covers Docker architecture,
+installation, images, containers, Docker Hub, Dockerfile, volumes, networks, environment variables, port
+mapping, multi-container applications and Docker best practices. The main learning approach is to
+understand how containers work and practice managing them.
+
+
+-> What is Docker?
+Docker is a containerization platform used to package applications and their dependencies into portable
+and consistent containers. Containerization makes applications easier to run across different
+environments and is an important part of modern DevOps.
+
+-> Docker Architecture
+Docker uses a client and daemon model. The Docker client sends commands, while the Docker daemon
+manages images, containers, networks and volumes. Docker registries are used to store and distribute
+images.
+
+-> Docker Images vs Containers
+A Docker image is a package or template used to create containers. A Docker container is a running or
+stopped instance created from an image. Images are built or downloaded, while containers are started,
+stopped and managed.
+
+-> Dockerfile
+A Dockerfile is a text file containing instructions for building a Docker image. The hands-on activity
+requires creating a Dockerfile for a simple HTML or Node.js application and building a custom image.
+
+-> Docker Volumes
+Docker volumes provide persistent storage. They are useful when application data should remain
+available even if a container is recreated. The hands-on activity requires persistent storage using Docker
+volumes.
+
+-> Docker Networks
+Docker networks allow containers to communicate. A custom Docker network is required for the
+multi-container application so that frontend, backend and database services can communicate
+successfully.
+
+-> Docker Compose
+Docker Compose is used to define and run multiple containers as one application using a Compose file.
+The Week 4 activity requires a frontend, backend and database together with volumes and a custom
+network.
+
+-> Docker Hub
+Docker Hub is a registry where Docker images can be stored and shared. The assignment requires
+pulling images from Docker Hub and pushing the custom Docker image created during the activity.
+
+-> Testing and Verification
+Docker installation, images and running containers should be verified. The Dockerfile should build
+successfully, the volume and custom network should be checked, and the multi-container application
+should be started with Docker Compose. The running application and container communication should
+also be verified.
+
+-> Docker Best Practice
+The assignment recommends using minimal base images and a .dockerignore file to exclude
+unnecessary files. This helps keep Docker images lightweight and can improve build and deployment
+speed.
+
+-> Conclusion
+Week 4 provided practical experience with Docker containerization and Docker Compose. The activities
+helped build an understanding of images, containers, volumes, networks and multi-container
+applications. These fundamentals provide a useful foundation for future work involving Kubernetes,
+CI/CD pipelines and cloud-native deployments.

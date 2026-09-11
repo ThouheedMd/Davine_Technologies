@@ -1,0 +1,19 @@
+Install Docker Desktop or Docker Engine.
+• Verify the Docker installation.
+• Pull images from Docker Hub.
+• Create and manage Docker containers.
+• Build your own Docker image using a Dockerfile.
+• Run a simple HTML or Node.js application inside a container.
+• Configure Docker Volumes for persistent storage.
+• Create a custom Docker Network.
+• Deploy a multi-container application using Docker Compose.
+• Push your Docker image to Docker Hub.
+• Prepare a short PDF explaining:
+o What is Docker?
+o Docker Architecture
+o Images vs Containers
+o Dockerfile
+o Docker Volumes
+o Docker Networks
+o Docker Compose
+o Docker Hub 
