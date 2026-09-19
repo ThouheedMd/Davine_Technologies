@@ -3,9 +3,9 @@ Create a Dockerfile for a simple HTML or Node.js application.
 ➢ Push the image to Docker Hub.
 ➢ Create a Docker Compose file.
 ➢ Deploy a multi-container application consisting of:
-o Frontend
-o Backend
-o Database
+    o Frontend
+    o Backend
+    o Database
 ➢ Configure Docker Volumes for persistent storage.
 ➢ Configure a custom Docker Network.
 ➢ Verify that all containers are communicating successfully.

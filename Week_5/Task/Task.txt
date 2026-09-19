@@ -7,15 +7,15 @@
 ➢ Create a Declarative Pipeline.
 ➢ Write a Jenkinsfile.
 ➢ Create pipeline stages for:
-o Checkout o Build o Test
+    o Checkout o Build o Test
 ➢ Execute the pipeline and analyze the build logs.
 ➢ Configure basic GitHub Webhook integration.
 ➢ Prepare a short PDF explaining:
-o CI/CD
-o Jenkins Architecture
-o Freestyle Jobs
-o Declarative Pipelines
-o Jenkinsfile
-o GitHub Webhooks
-o Jenkins Credentials
-o Pipeline Stages
+    o CI/CD
+    o Jenkins Architecture
+    o Freestyle Jobs
+    o Declarative Pipelines
+    o Jenkinsfile
+    o GitHub Webhooks
+    o Jenkins Credentials
+    o Pipeline Stages

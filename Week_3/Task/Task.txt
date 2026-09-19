@@ -7,11 +7,11 @@
 ➢ Host a simple HTML webpage.
 ➢ Verify that the website is accessible through your browser.
 ➢ Prepare a short PDF explaining:
-o Shell Scripting
-o Variables
-o Loops
-o Functions
-o Cron Jobs
-o Apache
-o Nginx
-o Log Management 
+    o Shell Scripting
+    o Variables
+    o Loops
+    o Functions
+    o Cron Jobs
+    o Apache
+    o Nginx
+    o Log Management 

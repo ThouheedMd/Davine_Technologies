@@ -1,10 +1,10 @@
 ➢ Use Terraform to provision the required infrastructure.
 ➢ Use Ansible to configure the provisioned server.
 ➢ Configure the server with:
-o Required packages
-o Application user
-o Web server
-o Required service configuration
+    o Required packages
+    o Application user
+    o Web server
+    o Required service configuration
 ➢ Run the Ansible Playbook against the provisioned server.
 ➢ Verify that the server is configured correctly.
 ➢ Make one configuration change through Ansible and apply it again.

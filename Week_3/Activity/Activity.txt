@@ -1,8 +1,8 @@
 ➢ Create a Bash script to:
-o Create project directories.
-o Generate automatic backups.
-o Copy project files.
-o Compress the backup into an archive.
+    o Create project directories.
+    o Generate automatic backups.
+    o Copy project files.
+    o Compress the backup into an archive.
 ➢ Schedule the script using Cron.
 ➢ Install Apache or Nginx.
 ➢ Deploy a simple HTML website.

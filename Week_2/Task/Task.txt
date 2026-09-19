@@ -10,9 +10,9 @@
 ➢ Create a professional README.md file.
 ➢ Configure a .gitignore file.
 ➢ Prepare a short PDF explaining:
-o Git, GitHub, Git Workflow
-o Branching, Merge
-o Rebase
-o Pull Requests
-o README.md
-o .gitignore 
+    o Git, GitHub, Git Workflow
+    o Branching, Merge
+    o Rebase
+    o Pull Requests
+    o README.md
+    o .gitignore 

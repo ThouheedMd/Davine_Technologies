@@ -1,0 +1,14 @@
+➢ Install Prometheus.
+➢ Install Grafana.
+➢ Configure Prometheus as a Grafana data source.
+➢ Install Node Exporter.
+➢ Configure Prometheus to collect Node Exporter metrics.
+➢ Monitor:
+    o CPU Usage
+    o Memory Usage
+    o Disk Usage
+    o System Uptime
+➢ Create a basic Grafana dashboard.
+➢ Explore important Linux log files.
+➢ Understand the basic purpose of the ELK Stack.
+➢ Configure at least one basic alert. 

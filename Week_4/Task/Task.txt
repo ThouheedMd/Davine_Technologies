@@ -9,11 +9,11 @@ Install Docker Desktop or Docker Engine.
 • Deploy a multi-container application using Docker Compose.
 • Push your Docker image to Docker Hub.
 • Prepare a short PDF explaining:
-o What is Docker?
-o Docker Architecture
-o Images vs Containers
-o Dockerfile
-o Docker Volumes
-o Docker Networks
-o Docker Compose
-o Docker Hub 
+    o What is Docker?
+    o Docker Architecture
+    o Images vs Containers
+    o Dockerfile
+    o Docker Volumes
+    o Docker Networks
+    o Docker Compose
+    o Docker Hub 
