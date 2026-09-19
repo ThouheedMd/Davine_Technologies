@@ -7,4 +7,4 @@
 ➢ Roll back the Deployment to the previous version.
 ➢ Use a separate Namespace for the application.
 ➢ Draw the deployment flow:
-User → Service → Deployment → Pods → Container
+    User → Service → Deployment → Pods → Container

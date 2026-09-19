@@ -1,0 +1,11 @@
+➢ Monitor the server during normal operation.
+➢ Generate a controlled increase in CPU usage.
+➢ Observe the change in Prometheus metrics.
+➢ Identify the change through Grafana.
+➢ Check relevant Linux logs.
+➢ Create an alert for high CPU usage.
+➢ Investigate the alert and identify the possible cause.
+➢ Restore the server to normal operation.
+➢ Document the complete troubleshooting flow.
+Create a simple monitoring flow:
+    Linux Server → Node Exporter → Prometheus → Grafana → Alert
