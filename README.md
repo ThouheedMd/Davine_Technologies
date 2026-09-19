@@ -33,6 +33,10 @@ inventory,playbooks, modules and Terraform + Ansible workflow for provisioning a
 Kubernetes fundamentals, Pods, Deployments, Services, ConfigMaps, Secrets, 
 Namespaces, Kubectl commands, Helm basics, and Ingress introduction.
 
+### Week 08 - Monitoring, Logging & Observability
+Prometheus, Grafana, Node Exporter, Linux logs, ELK overview,
+metrics, dashboard, alerts, and troubleshooting fundamentals.
+
 ## Repository Structure
 
 - Week-01 -> 
@@ -49,4 +53,6 @@ Namespaces, Kubectl commands, Helm basics, and Ingress introduction.
     Infrastructure as Code & Configuration Management
 - Week-07 ->
     Kubernetes & Container Orchestration
+- Week-08 ->
+    Monitoring, Logging & Observability
 - README.md
