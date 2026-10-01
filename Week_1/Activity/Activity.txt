@@ -1,15 +1,57 @@
- Create a DevOps directory.
- Inside it, create:
-    o Projects
-    o Scripts
-    o Logs
-    o Backup
- Create sample files inside each folder.
- Create two Linux users and one group named developers.
- Add both users to the developers group.
- Assign appropriate file permissions.
- Configure your system hostname.
- Verify internet connectivity using the ping command.
- Display your IP address and system information.
- Compress the DevOps directory into a ZIP or TAR file.
- Document each step performed. 
+WEEK 1 - HANDS-ON ACTIVITY: Linux Server Preparation
+=====================================================
+
+STEPS AND COMMANDS
+------------------
+1. Create the DevOps directory and sub-folders
+   mkdir -p DevOps/{Projects,Scripts,Logs,Backup}
+
+2. Create sample files inside each folder
+   echo "Sample project file" > DevOps/Projects/app.txt
+   echo "echo Hello DevOps" > DevOps/Scripts/sysinfo.sh
+   echo "[INFO] Server started" > DevOps/Logs/system.log
+   echo "Backup notes" > DevOps/Backup/backup_notes.txt
+
+3. Create the developers group
+   sudo groupadd developers
+
+4. Create two users
+   sudo useradd -m -s /bin/bash user1
+   sudo useradd -m -s /bin/bash user2
+
+5. Add both users to the developers group
+   sudo usermod -aG developers user1
+   sudo usermod -aG developers user2
+   Verify: groups user1 user2   |   getent group developers
+
+6. Assign file permissions
+   sudo chgrp -R developers DevOps
+   sudo chmod -R 770 DevOps
+   chmod +x DevOps/Scripts/sysinfo.sh
+   Verify: ls -lR DevOps
+
+7. Configure the system hostname
+   sudo hostnamectl set-hostname devops-server
+   Verify: hostnamectl
+
+8. Verify internet connectivity
+   ping -c 4 google.com
+
+9. Display IP address and system information
+   ip addr
+   hostname -I
+   uname -a
+   cat /etc/os-release
+
+10. Compress the DevOps directory
+    tar -czvf DevOps.tar.gz DevOps/
+    Verify: ls -lh DevOps.tar.gz
+
+IMPLEMENTATION SUMMARY
+----------------------
+Created the DevOps directory with Projects, Scripts, Logs and Backup folders
+and added sample files to each. Created the developers group with two users
+(user1 and user2) and added both to the group. Applied group-based permissions
+using chgrp and chmod 770 so only the owner and developers can access the files.
+Configured the hostname, verified internet connectivity with ping, and checked
+the IP address. Finally, compressed the DevOps directory into DevOps.tar.gz.
