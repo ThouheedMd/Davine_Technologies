@@ -1,50 +1,111 @@
-DevOps Internship - Week 1 Report
+Week 1 Report
 
-Topic : Linux Fundamentals, Linux Administration & Networking Basics
+Linux Fundamentals, Linux Administration & Networking Basics
 
--> Introduction
-This week I learned the basics of Linux and practiced using Ubuntu. I explored the Linux terminal,
-worked with files and directories, learned how users and groups are managed, and understood why
-Linux is important in DevOps.
+DevOps Internship | Davine Technologies
 
--> Linux Fundamentals
-Linux is an open-source operating system known for stability, security and flexibility. It is widely
-used for servers, cloud platforms and DevOps automation.
+1. Linux Fundamentals
+    Linux is a free, open-source, Unix-like operating system built around the Linux kernel. Distributions such
+as Ubuntu, Debian and CentOS package the kernel with tools and software. Linux powers most servers,
+cloud platforms and containers, which makes it the base skill for DevOps: Docker, Kubernetes, Jenkins
+and Terraform all run on it. Key strengths are stability, security, scriptability and a rich command-line
+interface.
 
--> Linux File System
-Linux stores everything in a hierarchical structure starting from the root directory (/). Important
-directories include /home for user files, /etc for configuration, /var for logs and /usr for installed
-programs.
+2. Linux File System
+    Linux uses a single tree starting at / (root), organised by the Filesystem Hierarchy Standard (FHS).
+Everything, including devices and processes, is treated as a file.
+Directory Purpose
+/ Root of the file system
+/home User home directories
+/etc System configuration files
+/var Variable data such as logs (/var/log)
+/bin, /usr/bin Essential user commands
+/tmp Temporary files
+/opt Optional third-party software
+/dev, /proc Devices and process information
 
--> Users and Groups
-Linux supports multiple users. Groups help manage permissions for several users at once. I
-learned to create users, groups and assign users to groups.
+3. Users & Groups
+    Each user has a unique UID and belongs to one or more groups. Groups make it easy to give a team
+shared access to resources. User data is stored in /etc/passwd, /etc/shadow and /etc/group.
+sudo groupadd developers
+sudo useradd -m -s /bin/bash user1
+sudo usermod -aG developers user1
+id user1
+getent group developers
 
--> File Permissions
-Each file has read, write and execute permissions for the owner, group and others. Commands like
-chmod and chown are used to manage access.
+4. File Permissions
+    Every file has permissions for the owner, the group and others: read (r=4), write (w=2) and execute
+(x=1). For example, chmod 770 gives the owner and group full access and others none.
+ls -l file.txt # -rwxrwx---
+chmod 770 file.txt
+chown user1:developers file.txt
+chmod +x script.sh
 
--> Package Management
-Ubuntu uses the APT package manager. I practiced updating packages and installing software
-using sudo apt update, sudo apt upgrade and sudo apt install.
+5. Package Management
+    Package managers install, update and remove software and handle dependencies. Ubuntu and Debian
+use apt; RHEL and CentOS use yum/dnf.
+sudo apt update
+sudo apt upgrade -y
+sudo apt install -y nginx
+sudo apt remove nginx
 
--> Environment Variables
-Environment variables store system settings. I learned to view them with printenv and create
-temporary variables using export.
+6. Environment Variables
+    Environment variables store configuration values used by the shell and applications, such as PATH,
+HOME and custom values like APP_ENV. They keep configuration out of code and are widely used in
+Docker, Jenkins and Kubernetes.
+export APP_ENV=development
+echo $APP_ENV
+printenv
+echo 'export APP_ENV=development' >> ~/.bashrc
 
--> Basic Networking
-I practiced hostname, hostnamectl, ip addr, ping and ifconfig to view system information and test
-connectivity.
+7. Basic Networking
+    Networking basics include IP addresses, hostnames, DNS, ports and protocols. Useful commands help
+inspect and test connectivity.
+Command Purpose
+hostname / hostnamectl Show or set the system hostname
+ip addr Display IP addresses and interfaces
+ifconfig Legacy interface info (net-tools)
+ping -c 4 google.com Test connectivity to a host
 
--> SSH
-SSH is used for secure remote access to Linux systems. It allows administrators to manage servers
-safely over a network.
+8. SSH
+    SSH (Secure Shell) provides encrypted remote access to servers on port 22. In DevOps it is used to
+manage servers, deploy applications, run Ansible playbooks and connect CI/CD tools to remote machines.
+Key-based authentication is more secure than passwords.
+ssh user@192.168.1.10
+ssh-keygen -t ed25519
+ssh-copy-id user@192.168.1.10
 
--> 20 Common Linux Commands
-pwd, ls, cd, mkdir, rmdir, touch, cp, mv, rm, cat, nano, grep, find, chmod, chown, ps, top, df -h, du
--sh, uname -a.
+9. 20 Common Linux Commands
+    # Command Description
+1 pwd Show current directory
+2 ls -la List all files with details
+3 cd Change directory
+4 mkdir -p Create directories
+5 touch Create an empty file
+6 cp -r Copy files or directories
+7 mv Move or rename
+8 rm -r Remove files or directories
+9 cat Display file contents
+10 grep Search text in files
+11 chmod Change permissions
+12 chown Change owner and group
+13 useradd Create a user
+14 groupadd Create a group
+15 usermod -aG Add user to a group
+16 apt update/upgrade Update packages
+17 apt install Install software
+18 ps aux List processes
+19 top Live process monitor
+20 kill Stop a process
 
--> Conclusion
-This week's activities improved my confidence in using Linux. I understand the basic commands,
-file system, permissions, users, networking and package management, which will help me in
-upcoming DevOps topics such as Docker, Jenkins and Kubernete
+10. Hands-on Activity Summary
+    Created a DevOps directory with Projects, Scripts, Logs and Backup folders and added sample files.
+Created the developers group with two users, applied group permissions with chgrp and chmod 770,
+configured the hostname, verified connectivity with ping, checked the IP address, and compressed the
+directory into DevOps.tar.gz.
+
+11. Conclusion
+    Week 1 built the Linux foundation needed for the rest of the internship: navigating the file system,
+managing users and permissions, installing packages, monitoring processes, configuring networking and
+connecting over SSH. These skills directly support Docker, Jenkins, Terraform and Kubernetes in the
+coming weeks.
