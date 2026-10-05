@@ -149,10 +149,6 @@ Created the DevOps directory with Projects, Scripts, Logs and Backup folders and
 - `hostnamectl` and `ip addr` are the modern replacements for `hostname` and `ifconfig` on current distributions.
 - Scripting and automation in later weeks build directly on these command-line basics.
 
-## Challenges & Fixes
-
-- *(Add any issue you faced, for example a permission denied error fixed with `sudo` or `chmod`, or a network problem on VirtualBox solved by switching to bridged mode.)*
-
 ---
 
 **Next:** [Week 2: Git, GitHub & DevOps Collaboration](../Week_2/README.md)
