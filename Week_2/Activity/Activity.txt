@@ -1,9 +1,75 @@
-➢ Create a repository named DevOps-Week 02
-➢ Add at least five project files.
-➢ Create two feature branches.
-➢ Make different changes in each branch.
-➢ Merge both branches into the main branch.
-➢ Create a Pull Request (PR).
-➢ Resolve one merge conflict (if possible).
-➢ Update the README.md with project details.
-➢ Push the final project to GitHub. .
+WEEK 2 - HANDS-ON ACTIVITY: Managing Source Code with Git & GitHub
+===================================================================
+Scenario: Junior DevOps Engineer managing a new application's source code
+and collaborating with other developers.
+
+STEPS AND COMMANDS
+------------------
+1. Create the repository "DevOps-Week-02" on GitHub
+   (GitHub does not allow spaces, so the name becomes DevOps-Week-02)
+   git clone https://github.com/<username>/DevOps-Week-02.git
+   cd DevOps-Week-02
+
+2. Add five project files
+   index.html, style.css, app.py, config.yaml, deploy.sh
+   (plus README.md and .gitignore)
+   git add .
+   git commit -m "Initial commit: add project files, README and .gitignore"
+   git push -u origin main
+
+3. Create two feature branches
+   git checkout -b feature-login
+   git checkout main
+   git checkout -b feature-footer
+
+4. Make different changes in each branch
+   feature-login  : change the greeting in app.py
+                    git commit -am "feat: update greeting message in app.py"
+   feature-footer : add footer.html and change the SAME greeting line differently
+                    git add footer.html
+                    git commit -am "feat: change greeting and add footer"
+   git push -u origin feature-login
+   git push -u origin feature-footer
+
+5. Create Pull Requests on GitHub
+   Compare & pull request -> base: main <- compare: feature-login -> Create PR
+   Review the changes, then click "Merge pull request"
+   Repeat for feature-footer
+
+6. Merge both branches into main (locally)
+   git checkout main
+   git pull
+   git merge feature-login          # merges cleanly
+   git merge feature-footer         # CONFLICT in app.py
+
+7. Resolve the merge conflict
+   git status                       # app.py shows as "both modified"
+   Open app.py and remove the markers:
+       <<<<<<< HEAD
+       return "Welcome back to the DevOps app"
+       =======
+       return "Hello from the DevOps sample app"
+       >>>>>>> feature-footer
+   Keep one final version of the line, then:
+       git add app.py
+       git commit -m "Resolve merge conflict in app.py"
+
+8. Update README.md with project details
+   (project description, file table, workflow, branches)
+   git commit -am "docs: update README with project details"
+
+9. Push the final project
+   git push origin main
+
+Automation: git_workflow_demo.sh reproduces steps 2 to 7 plus a rebase
+demo in a local test repository (~/git-demo).
+
+IMPLEMENTATION SUMMARY
+----------------------
+Created the DevOps-Week-02 repository, added five project files with a README
+and .gitignore, and pushed them to GitHub. Created two feature branches
+(feature-login and feature-footer) and made different changes in each. Opened
+Pull Requests and merged both branches into main. The second merge caused a
+conflict in app.py because both branches edited the same line, which was
+resolved manually by keeping one final version and committing the result.
+Finally, updated the README with project details and pushed the project.

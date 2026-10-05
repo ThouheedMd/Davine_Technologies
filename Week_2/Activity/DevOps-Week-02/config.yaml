@@ -1,0 +1,4 @@
+app:
+  name: devops-sample
+  version: 1.0
+  environment: development

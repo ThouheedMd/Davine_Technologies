@@ -1,0 +1,39 @@
+WEEK 2 - GIT CHEAT SHEET (25 Commonly Used Git Commands)
+=========================================================
+
+SETUP
+1.  git --version                          Check Git installation
+2.  git config --global user.name "Name"   Set your username
+3.  git config --global user.email "mail"  Set your email
+4.  git init                               Create a new local repository
+5.  git clone <url>                        Copy a remote repository locally
+
+SNAPSHOTS
+6.  git status                             Show changed/staged files
+7.  git add <file>   |  git add .          Stage files
+8.  git commit -m "message"                Save staged changes
+9.  git diff                               Show unstaged changes
+10. git log --oneline --graph --all        View commit history as a graph
+11. git show <commit>                      Show details of a commit
+
+BRANCHING & MERGING
+12. git branch                             List branches
+13. git branch <name>                      Create a branch
+14. git checkout <name>  |  git switch <name>    Switch branch
+15. git checkout -b <name>                 Create and switch to a branch
+16. git merge <branch>                     Merge a branch into the current one
+17. git branch -d <name>                   Delete a merged branch
+18. git rebase <branch>                    Reapply commits on top of another branch
+
+REMOTE
+19. git remote add origin <url>            Link a remote repository
+20. git remote -v                          Show remotes
+21. git push -u origin main                Push and set upstream
+22. git pull                               Fetch and merge remote changes
+23. git fetch                              Download remote changes only
+
+UNDOING CHANGES
+24. git restore <file>                     Discard changes in a file
+25. git reset --soft HEAD~1                Undo last commit, keep changes
+    git revert <commit>                    Create a commit that undoes another
+    git stash  |  git stash pop            Temporarily save / restore changes
