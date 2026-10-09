@@ -1,78 +1,102 @@
-DevOps Internship - Week 3 Report
+Week 3 Report
 
-Topic : Shell Scripting, Automation & Web Servers
+Automation & Web Servers
 
--> System Information Script
-A Bash script was used to display basic information about the Ubuntu system. The script collects
-information such as the current user, hostname, operating system/kernel, date and time, IP information, disk
-usage, and memory usage.
-Example commands used
-chmod +x system_info.sh
-./system_info.sh
+DevOps Internship | Davine Technologies
 
--> Automated Backup
-A Bash backup script was prepared to automate the backup process. The activity creates a backup
-directory, copies the project files, and compresses the backup into a .tar.gz archive. The generated archive
-provides a single file that can be stored or transferred.
-Backup flow
-Project files → Backup directory → Compressed .tar.gz archive
+1. Shell Scripting
+    A shell script is a text file of commands executed by a shell such as Bash. Scripts automate repetitive
+tasks (backups, user creation, log cleanup, deployments), reduce manual errors and make work
+repeatable. Every script starts with a shebang (#!/bin/bash) and must be made executable with chmod
++x.
+#!/bin/bash
+echo "Hello, DevOps"
+chmod +x hello.sh
+./hello.sh
 
--> User and Directory Automation
-A script to create users and directories. This reduces repetitive manual
-work when setting up a project environment. The directory structure used for the internship includes project,
-script, log, and backup locations.
+2. Variables
+    Variables store values for reuse. They are assigned without spaces (NAME="value") and read with
+$NAME. Scripts receive input through arguments ($1, $2) or the read command, and $(command)
+captures a command's output.
+NAME="DevOps"
+read -p "Enter folder: " DIR
+TODAY=$(date +%F)
+echo "Hello $NAME, today is $TODAY"
+SRC="${1:-/home/user/data}" # default value
 
--> log cleanup
-A separate Bash script is used for the required log-management exercise. Its purpose is to identify old log
-files and remove them according to the selected retention condition. The script should be tested carefully so
-that only intended files are removed.
-These two activities demonstrate how Bash can be used to automate common Linux administration tasks.
+3. Conditional Statements and Loops
+    if/else and case statements let a script make decisions, such as checking that a directory exists before
+backing it up. for and while loops repeat actions, for example creating several users or processing every
+log file.
+if [ -d "$SRC" ]; then
+ echo "Found"
+else
+ echo "Missing"; exit 1
+fi
+for USER in user1 user2 user3; do
+ echo "Creating $USER"
+done
 
--> Cron Job Automation
-Cron was used to schedule the backup script. Instead of running the backup manually, a Cron entry can
-execute the script at a defined time or interval. The Cron configuration was checked using crontab -l and the
-Cron service status was verified.
-Verification commands
+4. Functions
+    Functions group reusable logic under a name, keeping scripts short and readable. A common example is a
+logging function used throughout a script.
+log() { echo "[$(date '+%F %T')] $1" | tee -a backup.log; }
+log "Backup started"
+
+5. Automation Scripts Created
+    Script Purpose
+sysinfo.sh Displays hostname, OS, kernel, uptime, IP, CPU, memory and disk usage
+backup.sh Creates a timestamped .tar.gz backup of a directory
+create_users_dirs.sh Creates users and personal directories with correct ownership and
+permissions
+clean_logs.sh Deletes .log files older than a set number of days using find -mtime
+project_backup.sh Activity script: creates directories, copies files, backs up, compresses and
+logs
+
+6. Cron Jobs
+    Cron is the Linux job scheduler. Jobs are defined in a crontab with five time fields (minute, hour, day of
+month, month, day of week) followed by the command. Use absolute paths and redirect output to a log file
+so failures can be investigated.
+crontab -e
+0 2 * * * /home/user/scripts/project_backup.sh >> /home/user/DevOps/Logs/cron.log 2>&1
 crontab -l
-sudo systemctl status cron --no-pager
+Schedule Meaning
+*/5 * * * * Every 5 minutes
+0 2 * * * Every day at 2:00 AM
+0 3 * * 0 Every Sunday at 3:00 AM
 
--> Apache Web Server
-Apache was selected for the web server activity. The server was installed on Ubuntu and used to host a
-simple HTML page. After deployment, the Apache service status and port 80 were checked.
-Typical verification commands
-sudo systemctl status apache2 --no-pager
-ss -tuln | grep ':80'
+7. Apache Web Server
+    Apache HTTP Server is a widely used, modular web server. Its default web root is /var/www/html and it
+is managed with systemctl. Per-directory overrides are possible through .htaccess files.
+sudo apt install -y apache2
+sudo systemctl enable --now apache2
+sudo cp index.html /var/www/html/
+curl -I http://localhost
 
--> Concepts Covered
----Shell Scripting---
-Shell scripting is a way to place Linux commands into a script so that a sequence of operations can be
-repeated consistently. In this week's work, Bash scripts were used for system information, backups, user
-and directory creation, and log cleanup.
----Variables---
-Variables store values that a script can use later. They are useful for paths, filenames, dates, user input,
-and configuration values.
----Loops---
-Loops repeat a set of commands. They are useful when the same operation needs to be performed for
-multiple files, directories, or values.
----Functions---
-Functions group related commands into reusable sections. This can make a Bash script easier to read,
-maintain, and test.
----Cron Jobs---
-Cron provides scheduled execution of commands or scripts. It is useful for recurring tasks such as backups.
+8. Nginx Web Server
+    Nginx is an event-driven web server known for speed and low memory use. It is commonly used for static
+content, as a reverse proxy and as a load balancer. Configuration is checked with nginx -t before
+reloading.
+Apache Nginx
+Architecture Process/thread per connection Event-driven, asynchronous
+Static content Good Excellent
+Config Supports .htaccess Central config files only
+Best for Flexible, module-rich setups High traffic, proxy, load balancing
 
--> Apache, Nginx and Log Management
----Apache---
-Apache is a web server used to serve web content over HTTP/HTTPS. It was used for the practical website
-deployment in this week's activity.
----Nginx---
-Nginx is another web server that can serve static content and also act as a reverse proxy. The official
-assignment asks for understanding of both Apache and Nginx, while allowing either Apache or Nginx for the
-practical installation.
----Log Management---
-Log management involves monitoring, reviewing, retaining, and cleaning log files. The Week 3 log-cleanup
-script demonstrates how an administrator can automate part of this process.
+9. Basic Web Server Configuration and Log Management
+    Web servers write an access log (every request) and an error log (problems). Reviewing them is the first
+step in troubleshooting. Old logs should be cleaned or rotated to save disk space, which is automated with
+clean_logs.sh or logrotate.
+sudo tail -f /var/log/apache2/access.log
+sudo tail -n 50 /var/log/apache2/error.log
+sudo tail -f /var/log/nginx/access.log
 
--> Conclusion
-This week provided practical experience with Bash scripting, Linux automation, Cron scheduling, and web
-server deployment. The activities showed how repetitive Linux tasks can be converted into scripts and
-scheduled instead of being performed manually each time.
+10. Hands-on Activity Summary
+    Wrote a Bash script that creates project directories, copies files, generates a timestamped backup and
+compresses it into an archive. Scheduled it with Cron to run daily at 2:00 AM, installed Apache, deployed a
+simple HTML company website to /var/www/html and verified it in the browser and with curl.
+
+11. Conclusion
+    Week 3 showed how scripting and scheduling remove manual work, and how a web server publishes
+content. These skills lead directly into containers, CI/CD pipelines and configuration management in later
+weeks.

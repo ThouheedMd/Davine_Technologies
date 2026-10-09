@@ -1,17 +1,39 @@
-➢ Write a Bash script to display system information.
-➢ Create a script to automate file backups.
-➢ Develop a script to create users and directories.
-➢ Write a script to clean old log files.
-➢ Schedule a Bash script using Cron.
-➢ Install Apache or Nginx on your Linux system.
-➢ Host a simple HTML webpage.
-➢ Verify that the website is accessible through your browser.
-➢ Prepare a short PDF explaining:
-    o Shell Scripting
-    o Variables
-    o Loops
-    o Functions
-    o Cron Jobs
-    o Apache
-    o Nginx
-    o Log Management 
+WEEK 3 - WEEKLY TASK: Shell Scripting, Automation & Web Servers
+================================================================
+
+1. Bash script to display system information
+   scripts/sysinfo.sh
+   chmod +x sysinfo.sh && ./sysinfo.sh
+
+2. Script to automate file backups
+   scripts/backup.sh
+   ./backup.sh ~/DevOps/Projects ~/DevOps/Backup
+
+3. Script to create users and directories
+   scripts/create_users_dirs.sh
+   sudo ./create_users_dirs.sh user1 user2
+
+4. Script to clean old log files
+   scripts/clean_logs.sh
+   ./clean_logs.sh ~/DevOps/Logs 7
+
+5. Schedule a Bash script using Cron
+   crontab -e
+   Add:  */5 * * * * /home/<user>/scripts/backup.sh >> /home/<user>/DevOps/Logs/cron.log 2>&1
+   crontab -l
+
+6. Install Apache (or Nginx)
+   sudo apt update
+   sudo apt install -y apache2
+   sudo systemctl enable --now apache2
+
+7. Host a simple HTML webpage
+   sudo cp website/index.html /var/www/html/index.html
+
+8. Verify the website in the browser
+   http://localhost   or   http://<server-ip>
+   curl -I http://localhost
+
+9. PDF report
+   Prepared as Task/Report.pdf (shell scripting, variables, loops, functions,
+   cron jobs, Apache, Nginx, log management).

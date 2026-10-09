@@ -1,10 +1,63 @@
-➢ Create a Bash script to:
-    o Create project directories.
-    o Generate automatic backups.
-    o Copy project files.
-    o Compress the backup into an archive.
-➢ Schedule the script using Cron.
-➢ Install Apache or Nginx.
-➢ Deploy a simple HTML website.
-➢ Verify the website is accessible in your browser.
-➢ Document each step performed. 
+WEEK 3 - HANDS-ON ACTIVITY: Automate Linux Tasks and Deploy a Website
+======================================================================
+Scenario: Junior DevOps Engineer automating routine Linux tasks and deploying
+a simple company website on a Linux server.
+
+STEPS AND COMMANDS
+------------------
+1. Create the Bash script (project_backup.sh)
+   The script:
+     - creates the project directories (Projects, Backup, Logs)
+     - copies the project files
+     - generates a timestamped backup
+     - compresses the backup into a .tar.gz archive
+     - writes each action to Logs/backup.log
+   chmod +x project_backup.sh
+   ./project_backup.sh
+   ls -lh ~/DevOps/Backup
+
+2. Schedule the script using Cron (runs every day at 2:00 AM)
+   crontab -e
+   0 2 * * * /home/<user>/scripts/project_backup.sh >> /home/<user>/DevOps/Logs/cron.log 2>&1
+   crontab -l
+   (For testing, use */2 * * * * to run every 2 minutes.)
+
+3. Install Apache (or Nginx)
+   sudo apt update
+   sudo apt install -y apache2
+   sudo systemctl enable --now apache2
+   systemctl status apache2
+   (Nginx alternative: sudo apt install -y nginx)
+
+4. Deploy the HTML website
+   sudo cp website/index.html /var/www/html/index.html
+   sudo chown www-data:www-data /var/www/html/index.html
+
+5. Verify the website
+   curl -I http://localhost          # expect HTTP/1.1 200 OK
+   Open http://localhost or http://<server-ip> in the browser.
+   (WSL users: http://localhost works from the Windows browser.)
+
+6. Check logs
+   sudo tail -n 20 /var/log/apache2/access.log
+   sudo tail -n 20 /var/log/apache2/error.log
+
+Nginx server block (optional) - /etc/nginx/sites-available/company-site
+   server {
+       listen 80;
+       server_name _;
+       root /var/www/html;
+       index index.html;
+       location / { try_files $uri $uri/ =404; }
+   }
+   sudo ln -s /etc/nginx/sites-available/company-site /etc/nginx/sites-enabled/
+   sudo nginx -t && sudo systemctl reload nginx
+
+IMPLEMENTATION SUMMARY
+----------------------
+Wrote a Bash script that creates the project directories, copies project files,
+generates a timestamped backup and compresses it into a .tar.gz archive, logging
+every step. Scheduled the script with Cron so backups run automatically every
+day at 2:00 AM. Installed the Apache web server, deployed a simple HTML company
+website to /var/www/html, and verified it was accessible in the browser and with
+curl. Checked the Apache access and error logs to confirm requests were served.

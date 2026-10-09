@@ -1,0 +1,60 @@
+WEEK 3 - SHELL SCRIPTING CHEAT SHEET
+====================================
+
+BASICS
+#!/bin/bash                      Shebang: first line of every script
+chmod +x script.sh               Make the script executable
+./script.sh                      Run the script
+bash -n script.sh                Check syntax without running
+bash -x script.sh                Debug: print each command as it runs
+
+VARIABLES & INPUT
+NAME="DevOps"                    Assign (no spaces around =)
+echo "$NAME"                     Use a variable
+read -p "Enter name: " NAME      Read user input
+$1 $2  $#  $@                    Arguments, argument count, all arguments
+${1:-default}                    Default value if argument is missing
+$(date +%F)                      Command substitution
+$?                               Exit status of the last command
+
+CONDITIONS
+if [ -d "$DIR" ]; then ... fi              Directory exists
+if [ -f "$FILE" ]; then ... fi             File exists
+if [ "$A" -gt 5 ]; then ... fi             Numeric comparison (-eq -ne -lt -gt)
+if [ "$A" = "yes" ]; then ... else ... fi  String comparison
+case "$1" in start) ... ;; stop) ... ;; esac
+
+LOOPS
+for i in 1 2 3; do echo $i; done
+for f in *.log; do echo "$f"; done
+while [ $COUNT -lt 5 ]; do ((COUNT++)); done
+
+FUNCTIONS
+log() { echo "[$(date '+%F %T')] $1"; }
+log "Backup started"
+
+FILES & TEXT
+find . -name "*.log" -mtime +7 -delete     Delete old logs
+tar -czf backup.tar.gz dir/                Create archive
+grep -i "error" app.log                    Search text
+awk '{print $1}' file                      Print first column
+sed -i 's/old/new/g' file                  Replace text
+tail -f /var/log/syslog                    Follow a log live
+
+CRON (schedule jobs)
+crontab -e                       Edit your cron jobs
+crontab -l                       List cron jobs
+Format:  minute hour day month weekday command
+*/5 * * * *   cmd                Every 5 minutes
+0 2 * * *     cmd                Every day at 2:00 AM
+0 3 * * 0     cmd                Every Sunday at 3:00 AM
+
+WEB SERVERS
+sudo apt install -y apache2      Install Apache
+sudo apt install -y nginx        Install Nginx
+sudo systemctl start|stop|restart|status|enable apache2
+sudo nginx -t                    Test Nginx configuration
+curl http://localhost            Test the site from the terminal
+Apache logs: /var/log/apache2/access.log, error.log
+Nginx logs : /var/log/nginx/access.log, error.log
+Web root   : /var/www/html
