@@ -1,19 +1,54 @@
-Install Docker Desktop or Docker Engine.
-• Verify the Docker installation.
-• Pull images from Docker Hub.
-• Create and manage Docker containers.
-• Build your own Docker image using a Dockerfile.
-• Run a simple HTML or Node.js application inside a container.
-• Configure Docker Volumes for persistent storage.
-• Create a custom Docker Network.
-• Deploy a multi-container application using Docker Compose.
-• Push your Docker image to Docker Hub.
-• Prepare a short PDF explaining:
-    o What is Docker?
-    o Docker Architecture
-    o Images vs Containers
-    o Dockerfile
-    o Docker Volumes
-    o Docker Networks
-    o Docker Compose
-    o Docker Hub 
+WEEK 4 - WEEKLY TASK: Docker & Docker Compose
+==============================================
+
+1.  Install Docker (Docker Desktop or Docker Engine)
+    Ubuntu:  sudo apt update && sudo apt install -y docker.io
+             sudo usermod -aG docker $USER      (log out and in again)
+
+2.  Verify the installation
+    docker --version
+    docker run hello-world
+
+3.  Pull images from Docker Hub
+    docker pull nginx:alpine
+    docker pull node:20-alpine
+    docker images
+
+4.  Create and manage containers
+    docker run -d --name web -p 8081:80 nginx:alpine
+    docker ps
+    docker logs web
+    docker exec -it web sh
+    docker stop web && docker rm web
+
+5.  Build your own image from a Dockerfile
+    cd Task/node-app
+    docker build -t docker-week4-app:1.0 .
+
+6.  Run the Node.js application in a container
+    docker run -d --name node-app -p 3000:3000 docker-week4-app:1.0
+    Open http://localhost:3000
+
+7.  Configure a Docker volume (persistent storage)
+    docker volume create app-data
+    docker run -d --name node-app -p 3000:3000 -v app-data:/data docker-week4-app:1.0
+    (Refresh the page, then restart the container: the visit count is kept.)
+
+8.  Create a custom Docker network
+    docker network create week4-net
+    docker network inspect week4-net
+
+9.  Deploy a multi-container app with Docker Compose
+    cd Task
+    docker compose up -d --build
+    Open http://localhost:8080  (Nginx)  and  http://localhost:8080/app/  (Node.js)
+    docker compose ps
+
+10. Push the image to Docker Hub
+    docker login
+    docker tag docker-week4-app:1.0 <dockerhub-username>/docker-week4-app:1.0
+    docker push <dockerhub-username>/docker-week4-app:1.0
+
+11. PDF report
+    Prepared as Task/Report.pdf (Docker, architecture, images vs containers,
+    Dockerfile, volumes, networks, Compose, Docker Hub).

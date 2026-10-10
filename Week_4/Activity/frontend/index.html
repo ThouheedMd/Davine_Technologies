@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3-Tier Docker App</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f6f8; margin: 0; }
+    header { background: #1f3a5f; color: #fff; padding: 24px; text-align: center; }
+    .card { max-width: 520px; margin: 30px auto; background: #fff; padding: 24px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+    .ok { color: #1a7f37; } .bad { color: #b42318; }
+    button { padding: 10px 18px; background: #1f3a5f; color: #fff; border: 0; border-radius: 6px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <header><h1>Docker Compose: Frontend + Backend + Database</h1></header>
+  <div class="card">
+    <p>Backend status: <b id="status">checking...</b></p>
+    <p>Total visits stored in PostgreSQL: <b id="visits">-</b></p>
+    <p>Served by backend container: <b id="backend">-</b></p>
+    <button onclick="load()">Refresh (adds a visit)</button>
+  </div>
+  <script>
+    async function load() {
+      try {
+        const h = await (await fetch('/api/health')).json();
+        document.getElementById('status').textContent = h.status + ' / DB ' + h.database;
+        document.getElementById('status').className = 'ok';
+        const v = await (await fetch('/api/visits')).json();
+        document.getElementById('visits').textContent = v.total;
+        document.getElementById('backend').textContent = v.backend;
+      } catch (e) {
+        document.getElementById('status').textContent = 'backend unreachable';
+        document.getElementById('status').className = 'bad';
+      }
+    }
+    load();
+  </script>
+</body>
+</html>

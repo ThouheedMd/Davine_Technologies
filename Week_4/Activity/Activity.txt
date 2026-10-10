@@ -1,12 +1,65 @@
-Create a Dockerfile for a simple HTML or Node.js application.
-➢ Build a custom Docker image.
-➢ Push the image to Docker Hub.
-➢ Create a Docker Compose file.
-➢ Deploy a multi-container application consisting of:
-    o Frontend
-    o Backend
-    o Database
-➢ Configure Docker Volumes for persistent storage.
-➢ Configure a custom Docker Network.
-➢ Verify that all containers are communicating successfully.
-➢ Document every implementation step. 
+WEEK 4 - HANDS-ON ACTIVITY: Containerize a Web Application with Docker Compose
+===============================================================================
+Scenario: Junior DevOps Engineer containerizing a web application and deploying
+it with Docker Compose for a consistent development environment.
+
+ARCHITECTURE
+------------
+Browser --> frontend (Nginx :8080) --/api--> backend (Node.js :3000) --> db (PostgreSQL :5432)
+All three containers share the custom network "app-net".
+The database stores its data in the named volume "db-data".
+
+STEPS AND COMMANDS
+------------------
+1. Create a Dockerfile for the application
+   Activity/backend/Dockerfile   (Node.js, node:20-alpine, non-root user)
+   Activity/frontend/Dockerfile  (Nginx serving the HTML page)
+
+2. Build a custom Docker image
+   docker build -t <dockerhub-username>/week4-backend:1.0 ./backend
+   docker build -t <dockerhub-username>/week4-frontend:1.0 ./frontend
+   docker images
+
+3. Push the image to Docker Hub
+   docker login
+   docker push <dockerhub-username>/week4-backend:1.0
+   docker push <dockerhub-username>/week4-frontend:1.0
+
+4. Create the Docker Compose file
+   Activity/docker-compose.yml with services: frontend, backend, db
+
+5. Deploy the multi-container application
+   cp .env.example .env        (change the password)
+   docker compose up -d --build
+   docker compose ps
+
+6. Volumes for persistent storage
+   db-data volume mounted at /var/lib/postgresql/data
+   Verify: docker volume ls
+
+7. Custom Docker network
+   app-net (bridge). Services reach each other by name (backend, db).
+   Verify: docker network inspect activity_app-net
+
+8. Verify that all containers communicate
+   curl http://localhost:8080/api/health     -> {"status":"ok","database":"connected"}
+   curl http://localhost:8080/api/visits     -> {"total":1,...}
+   Open http://localhost:8080 in the browser and refresh to add visits.
+   docker compose logs backend
+
+9. Prove persistence
+   docker compose down            (containers removed, volume kept)
+   docker compose up -d
+   curl http://localhost:8080/api/visits     -> total continues from the old value
+
+10. Document every step (this file)
+
+IMPLEMENTATION SUMMARY
+----------------------
+Created Dockerfiles for a Node.js backend and an Nginx frontend, built custom
+images and pushed them to Docker Hub. Wrote a Docker Compose file that deploys
+three containers: frontend, backend and a PostgreSQL database. Configured a
+named volume so database data persists, and a custom bridge network so the
+containers communicate by service name. Verified the stack by calling the health
+and visits endpoints and confirmed the visit count survived a restart of the
+containers.

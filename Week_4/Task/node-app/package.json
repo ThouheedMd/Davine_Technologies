@@ -1,0 +1,8 @@
+{
+  "name": "docker-week4-app",
+  "version": "1.0.0",
+  "description": "Simple Node.js app for Docker practice",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "license": "ISC"
+}

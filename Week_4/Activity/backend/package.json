@@ -1,0 +1,9 @@
+{
+  "name": "week4-backend",
+  "version": "1.0.0",
+  "description": "Backend API connected to PostgreSQL",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "pg": "^8.11.3" },
+  "license": "ISC"
+}

@@ -1,0 +1,54 @@
+WEEK 4 - DOCKER COMMAND CHEAT SHEET (30 Commonly Used Commands)
+================================================================
+
+SETUP & INFO
+1.  docker --version                     Check installation
+2.  docker info                          Show system-wide information
+3.  docker run hello-world               Verify Docker works
+
+IMAGES
+4.  docker pull nginx:alpine             Download an image from Docker Hub
+5.  docker images                        List local images
+6.  docker build -t myapp:1.0 .          Build an image from a Dockerfile
+7.  docker tag myapp:1.0 user/myapp:1.0  Tag an image for Docker Hub
+8.  docker rmi myapp:1.0                 Remove an image
+9.  docker history myapp:1.0             Show image layers
+
+CONTAINERS
+10. docker run -d --name web -p 8080:80 nginx   Run in background with port mapping
+11. docker ps                            List running containers
+12. docker ps -a                         List all containers
+13. docker stop web                      Stop a container
+14. docker start web                     Start a stopped container
+15. docker restart web                   Restart a container
+16. docker rm web                        Remove a container
+17. docker logs -f web                   Follow container logs
+18. docker exec -it web sh               Open a shell inside a container
+19. docker inspect web                   Detailed container information
+20. docker stats                         Live CPU and memory usage
+21. docker run -e APP_ENV=dev myapp      Pass an environment variable
+
+VOLUMES & NETWORKS
+22. docker volume create app-data        Create a volume
+23. docker run -v app-data:/data myapp   Mount a volume
+24. docker volume ls                     List volumes
+25. docker network create app-net        Create a custom network
+26. docker network ls                    List networks
+27. docker run --network app-net myapp   Attach a container to a network
+
+DOCKER HUB
+28. docker login                         Log in to Docker Hub
+29. docker push user/myapp:1.0           Push an image
+30. docker logout                        Log out
+
+DOCKER COMPOSE
+docker compose up -d --build             Build and start all services
+docker compose ps                        List services
+docker compose logs -f backend           Follow one service's logs
+docker compose exec db psql -U appuser appdb    Run a command in a service
+docker compose down                      Stop and remove containers and networks
+docker compose down -v                   Also remove volumes (deletes data!)
+
+CLEAN UP
+docker system prune                      Remove unused containers, networks, images
+docker volume prune                      Remove unused volumes

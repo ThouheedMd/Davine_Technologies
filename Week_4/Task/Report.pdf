@@ -1,64 +1,118 @@
-DevOps Internship - Week 4 Report
+%PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document (opensource)
+1 0 obj
+<<
+/F1 2 0 R /F2 3 0 R /F3 4 0 R
+>>
+endobj
+2 0 obj
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
+endobj
+3 0 obj
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
+endobj
+4 0 obj
+<<
+/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+>>
+endobj
+5 0 obj
+<<
+/Contents 11 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 10 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
 
-Topic : Docker & Docker Compose
+>> 
+  /Type /Page
+>>
+endobj
+6 0 obj
+<<
+/Contents 12 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 10 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
 
--> Introduction
-Week 4 focuses on Docker and Docker Compose. The internship document covers Docker architecture,
-installation, images, containers, Docker Hub, Dockerfile, volumes, networks, environment variables, port
-mapping, multi-container applications and Docker best practices. The main learning approach is to
-understand how containers work and practice managing them.
+>> 
+  /Type /Page
+>>
+endobj
+7 0 obj
+<<
+/Contents 13 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 10 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
 
--> What is Docker?
-Docker is a containerization platform used to package applications and their dependencies into portable
-and consistent containers. Containerization makes applications easier to run across different
-environments and is an important part of modern DevOps.
+>> 
+  /Type /Page
+>>
+endobj
+8 0 obj
+<<
+/PageMode /UseNone /Pages 10 0 R /Type /Catalog
+>>
+endobj
+9 0 obj
+<<
+/Author (\(anonymous\)) /CreationDate (D:20261001082921+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261001082921+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (\(unspecified\)) /Title (Week 4 Report) /Trapped /False
+>>
+endobj
+10 0 obj
+<<
+/Count 3 /Kids [ 5 0 R 6 0 R 7 0 R ] /Type /Pages
+>>
+endobj
+11 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2034
+>>
+stream
+Gatm<D0)19&H8h>Z/\M^-+,E3#Xg^fa0hJhD%\q9P-i^1",<"^2VaDsUhV5@^3dnY^ddlf.ue,VEkBX\]=0F;@,d[>cS,CpGm4MW#nRJVF!-M%_!DN#bQ_DYUjCIs%+ht9!hS]s`-6W72gF6WJE&KtHl3d>,%J8>/B`+S":X%k`f:T#C4JcF$caea$l2q`KDKrtA3;Tdp;C%\#_ns"]`AA81_hcq%^Tr<]mruS+U%am$SKV@iT_7-auFAgL/#<Q&((A6.7=1l`[3;bGQ,c9(`nV)L._4VW\6jd8OZ*-#WnK!+=%ui[T`"u^B%L>-amlNa0j%J0jUBI)4^8f8tIV:$=DaO=>EW[7`,BGZ++7"gE>o8hgsFeG6`cdOXC9a<sJgFDh;Cg%/@18EaW$=oM7@$m/UF5X4&(jHeiE6CarYdI^ctIecJD&+J0%05ct*_6$O&J;&!sTdPPQEO>DIFGm#\E+JL=H&`k06$B4-L28nirOft_[g]nS/_.?<6i2d7G@2Qp;NUU)!7rMa%)MWk,!W#DhJf<t%^eh(").\Xj;?TO!+gN(U8gV@6=-0PjS0icUiABDH9W3`tOQD$]1-&kZ%7HV=?aR]$1eco>(icks%-N1p3F*dOP%LGM+`7b2i36`I07k%(+C$%Nb^^QtaF](3K,\@;OU7g/B53cK:i&E;Uq'%jnQSa#ECT%&T,"Y$?u!l"7q!s+BHL7_(+p.`,*pqFL$r+R.j8gdV(l-).)(=5$7%ScmLPGbpQU'U+/5&ukC>pV5]Re*Kqo6pYWXqueq:gR*N&rrN#@d@Wi->0+A0E(%]sJg\a4Ka_.QJk<';Ih"@M8AF**WR(J2@UkVi'c%]F];GEkZ!3fNe]0,:8%g9[+LMbu9'eEP[?UF+ba\-c&cTT:.lH0KNqF"-)m_9ctXdV2UN:HT1k/gR#<`d82]UfT+jjn]IqX?\U.SS-m4ipm,$jS53Tps$@F.U`I*:8@DG#(tW>?11rs*807gP'9>'*5+@ddHJUh`NeQ&hl6<ncp%I7n?Jbi^V-]#BaB:(f@Sj<n!0_`71m+H6cS<P0-Mq,(bMRQ[cgQ:7u[?F'`m'f2o!R?]AMlo4P]qgnm&Di%Z#tBXFoJ5`RT0[do%$m>)()BZ$f#P&hJbNN-1N&kdYRF/Z$e)bn=b6[qh^6%+Foe&,Zc%Imhq33H#.UhX]5\>2ImsT'`Fh53gX`hY;g3H*l:83bMRL=EX'/oJV*,4&INshpjrf5r92o.g_M"<LkS?=ME->!DB`D*B?b2cA!fC`9^A+ZIS,SBCZ@5SedisEm$FC<ZY-MF4DD;SZ[$Br-1k)P2_3@^#T"SI=d#"s6+QP5?CW>J54h7N,:d_mmW8TgeZ$*1nQ*d;>+gGYhkXa)Hs55[.K.H@AN`R=@q)Lo`Kja8!gULfP%YL"?"c=1rUD69=3MV8EQ[kI)lD[$J#_qoC2i$#FR&?P(kN95[JfMKsSs<CjXMs.)ZQ9Q&'""8*)]-],he1p0S:F!RGg-&-#E22SN[grdmKSXI><6Cl3hUN8[*]bdP=Rgbr@I[N=+raEQAO]W)-Q8)S7fcD3&-X'.bL!`BCQj2u!A6Z]NK@,Z(.)-?CkU6`ROf(msh.I4_`Gc,GQk:D'IkH&-'gJgDjh)QQpl%U.pm>b#(JN<ZV#:3E]?0-?7KW<%'JA#9W/l`(RZb?Gf30(?fKM\Rah5R.T"&kh223_st5`r47Q=c"ZCQfWJ!45X!Gi]'__&_M/PZ#^D7>f-bCnMlsWtO$2FK^SX78L,`H@#9#3!+A>RA1m"eSbfFlPWq3)=:J?iMX$Hn&M>)35@:t]An:9B0!YNL:I=HpEohIO3Z&NX=*HQ`c[#H)@)7DqV`Ia1b">92Q!7386Gj@U._>j^=s^Q]8@&FpUm)KnjZ&lZf:'%7lW`&c<f2$C#2uY3KD%0-TFr='&*k\a>Zcl3'Y#7JY%R1.@.q>Y>[W&s2[(qE,dY`/GFb73i]%l0).sEYuu5Ap)*e_;p4n.@BUXXOh/6@or@QfJ821OKFA:g"XT*9q#~>endstream
+endobj
+12 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 1710
+>>
+stream
+Gatm;=`<%a&:W67(^)7g"<u):78[$Vgt6IB,gN4j.-dO/Ot15[E`^p?V&Di&HY8\#-sJlD$b"/?B"j]/jq%P(5K*Oq$\2UHE;V3eikp-EAF,=brYEfAKC8ojS=KBB,kb^L;&HhhT#>ja[pA!W&78]"O2`=D2i.BN*.qE):aYGV6ng8jKb#Fc.X^,%(ksZ5b4HWOn3uJ>_=UBfItd\KU\Z3a%]T3^T)(SjJT$c4T'M)``%^)C,t<m%bVNusqb^!'T$ic'(RetF.&9b*PRGFG2<7Z%Y[&sajbiGD.9=M!b?V82XZ9GMYRc5]D?s2r.&`e3Q9fQE)G<L'\s/)[k'@6u0Jf),<E`4G\rRC;?a0/Xc.NB-nT8@#0Wg`k3R(tU'q":neP*SoEW]^d;.h%&;;T)jd'Z=bXGkg?R:f4$Y_HDIo"#Wj/fDphq]dtTJhBqcI8C>,(:5Vqp44\SBLB$H6GMJN!3p*E9p;Z%gVu8l;T3=+;-U4E@r_g_3Me2+:'T"@4#&h*Sh2R7iVMe.B"lU(6e74<ZdF6MdJfZ$>H,>"JG3Ilgs,^X\6eJ6N@r:T\I5@Ua.fL8:XQ-o]GF+m8i,R>Ck;K:9dV<\/QjUk3h&TeaVZEOWqk,S>p>c&8HhBf6ZOKRjU.0.kG?'"S=Y4bMkOQ8qi;NY]Zu._U&i>B'J3EjC1p^`.=7:*7i*i7cBUY9/U%WS1,j#PU*?DD>kIP<PUn@JYcr$.F;29*kXQ9lrB1oi-RScL`Z?`V$fZ0mq1]$h`868h&0itn!Y1Wm2dl/jO7t`NeO8:J\.D-;R_u*;eC5[hR<#>&As^7km"gMa"`Y):7J*4@h9Jn(i^XBXM0(u5-\srt$X2X<BJ,T2F"C**_YssXKseC?>.oY:HE:_R@RufbjAOcAW)"Io`i-Z0bU3[Fh,S%"_G6kM8^SB5>m=6jY-:&mVi]m]0mg:_F4l/bQlT#m#QB/m\5DJ1A'D;.RZ&Kh5:%SDK^e68JK)J7c+@GOH2*]CB=m-qf=ek/Dg/@.iinehgu#oVFsECH2t3s*^uXs$i*3lL%3'4':#/I;l/QW??lV[tDQBZ3gtGe5Y4VQ?0&>)ZSb@;LcE*DoaV%]#o9Mqb)4<H@?h8&$3Fp;YI(#mj\SrlR>Y.fN:]t.(i\\b3.Eo0l6)kRS+lpQ%\djWd:[PQ<#b)=@`R&%D:$q<FbJd-'JJNW9.I6<T1gV^n)Rd:`iUdB>MM`_>[+WY2S/k+m.r8*_G;EPA*=Q+Pc[blS<,/NfH<0d\5/ag_hqrpTcX+@NT:`bV5Pp,del@lS]eXKk%=N":8;^]$d1SD_V#lf#(>J7s@^'^7@Y'eK*$e##Ds+'?l:ntFe9et6),-Z`*n,#hH7]M8l5e-N;]e,`#6&Ha='ntbp[r?&;\Kg;6\4'N4$/5T+9m.a_-\SYhSOm-32aG=;+R/1WfKp3n<E07(Q!=b)`@4=5-T[XXM9Tg<BAYK$(@9$R5Jf@@YnGGE1"-d=,)[DDfO.$WU:UZj!.lU5WF0VIWX\/j$T*4[<U8r!5gipiflD)\?Z2_5.S`$lH"!Jcf"7.%KBc4"$_+`Ri)lXpTHNV,=$1NnNm1*"j4oLrQA>Qmb+553b;q/WaQ\Q/"ucRK!@;\H#h[]s.7t`.t.6L/JR'uK<$*-'5bBpk!VB0Qq()BB3h5!?0E*u[-":nYc[BFp?U8D4d=(Urbr!mrrFof?%;~>endstream
+endobj
+13 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 1712
+>>
+stream
+Gatm;gQ(#H&:O:SbY+'mZ)`\dA?F:S5dEtM-:+q/>i[1r5teT0X@0'6A_6nWc;5>3l!A0N0Qq;j'[L%1bV0=m_u0PI!dHn_-a+Ak#c;ZNE=g%[*P@o&rZ8?4j<P'Z=d1X3P;H\#,fB@q4(&XnE"PK8)CGrFE>g-C#%fU,44sUt_R)Xc#ZsD);+(Cs=TC*sINo96DJ"r<q@0;d'C86eg]edYGG+]uB9ra?&I)YV-%rNm2$h*0L4gH@O'09OGF2]XJ)h$6"h,1B2mZEE@)PB8B/VHq#4.KlW>6U,^(<2Q&+d?U,qlk8nF]I,V#'6oPV0m7eCqKf&bbO#aLQm??!<Pgkg^)5`j7uMOh5XT%U9aQd>\1?<rJ<=FJ@Ea-t'Ia`to,H!G/??/`!^\V6Rlc?3u*Qh:O$F#p-P<,Y\JircDu[C0>Q>6ugH\+8,?]2tT(F4ZS8@a%G[=U:"[6;7[gXIu#jIqt"8K`(bWqlhW%<6MRr)qmRr^m=0Trl#lncAU3K$hG1O_.3AMnJ7mgPn]uo3E,BjfA1m5>c:ZP.9;6M0EOI77jb3+Ha?k91@UsHo7O3\^fA[Y,EJCcQ$na4m0TP9[ms0!ooW8MqP8t`g5^,U^Wu]q&JmOj,F^aM[#h-uhUt`X82g7bK0ZK-enP:[N<ZE>p`pr5R`k8CL&ml_&TZ7A;YIJ`=r`LJh_KH5iQM.s+"a;X&H%#k(0lqf)0di'BNs:)7'Ykl*dm,OM2@"Km"IuqfeCG;l?^374;P8KT69;<R'tFq%Jo2Rl\`[18qg2::PG:RVde*eO;%$A0Pp:uUPQGP98IjR:XEd@0Sq)_rAYJ0(oOQ8=V.XQQ[MHsB9oYRnHN"ssPOrP8:Q5F9d=`iJ(Ii3'9>\UCSH/=X<YCs)E,li;epk52NapKS.\O>TC83:n\&IbN/]Yn1^jE>\bi(KiL`rbE\8C@lXR-=U`">><UsZ1Tb/"F3!'[/KU5m"s!>S[lDsh[\F?E?(bH;9S<8'sH%T)WtQqmd3<A_6SV)hNN"o(^5_E7HgaW2.s7o[IrF6:l[*u).A7Ut\h:fFOh&TiOBNs9sQX[ESeo9/[,8B;\)O<9gV/GSQIe2R0sD%rd;Pf6a4drZ5#pjL7\O9@cG4php)&*:7R(0k%/nC_`6],T_cj)F2>cB11@@aS_)$^\b3Ge(;;bC1tr]._nGO@Hi$\EZ#94]RZI!966?nIGI\H4S<LY]Ub=0J%O852OhR`Y8(+\h+]5CNR"ucjH@QDmGOD".u'_ioZhEU).BgRI#`MHalee52Nk_.di0i(X;MX5o"SqAq97qc4o&B.MGmqV%LXUAju[U;[c9C:\+\4O_Yq;/K>)T4]]qf)jW)B#k3t;>Wt!TfBnCaq;XQ4A&kR,$/di+Y_0Tn:0/GlT)7AI'^aP'KXi+Rr/Ff)9>,'6_><SPAr?\f4+;mrXpO)*:cD[q8s]ts*B!@#2DrGrL&XI0G@JdT/<Ir;E,0<..+]2/4Y>TB1,+6T8Z+A'7r!f(&oK.CM*he*=40te6EATSWrSD*24''YU,&un^@YkdWZ"<<h\MtCgZ6:7F6pLs#E277j9H.p;1NghH.`b*++VVA#@k!/IK(+9?Z=);Qn"mZGdL,XNCk:IkME(Wh5I%W9,_lTrciJV!btjGj@ZLpI`d$_e;[FE]1Rjcad6*FN.5]KX$?HhRGkM!Y\G:;;#)e1o9T@3dP1M.V*@Y]~>endstream
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000000061 00000 n 
+0000000112 00000 n 
+0000000219 00000 n 
+0000000331 00000 n 
+0000000436 00000 n 
+0000000641 00000 n 
+0000000846 00000 n 
+0000001051 00000 n 
+0000001120 00000 n 
+0000001400 00000 n 
+0000001472 00000 n 
+0000003598 00000 n 
+0000005400 00000 n 
+trailer
+<<
+/ID 
+[<65715549b646ae2e007054e2979123e4><65715549b646ae2e007054e2979123e4>]
+% ReportLab generated PDF document -- digest (opensource)
 
--> Docker Architecture
-Docker uses a client and daemon model. The Docker client sends commands, while the Docker daemon
-manages images, containers, networks and volumes. Docker registries are used to store and distribute
-images.
-
--> Docker Images vs Containers
-A Docker image is a package or template used to create containers. A Docker container is a running or
-stopped instance created from an image. Images are built or downloaded, while containers are started,
-stopped and managed.
-
--> Dockerfile
-A Dockerfile is a text file containing instructions for building a Docker image. The hands-on activity
-requires creating a Dockerfile for a simple HTML or Node.js application and building a custom image.
-
--> Docker Volumes
-Docker volumes provide persistent storage. They are useful when application data should remain
-available even if a container is recreated. The hands-on activity requires persistent storage using Docker
-volumes.
-
--> Docker Networks
-Docker networks allow containers to communicate. A custom Docker network is required for the
-multi-container application so that frontend, backend and database services can communicate
-successfully.
-
--> Docker Compose
-Docker Compose is used to define and run multiple containers as one application using a Compose file.
-The Week 4 activity requires a frontend, backend and database together with volumes and a custom
-network.
-
--> Docker Hub
-Docker Hub is a registry where Docker images can be stored and shared. The assignment requires
-pulling images from Docker Hub and pushing the custom Docker image created during the activity.
-
--> Testing and Verification
-Docker installation, images and running containers should be verified. The Dockerfile should build
-successfully, the volume and custom network should be checked, and the multi-container application
-should be started with Docker Compose. The running application and container communication should
-also be verified.
-
--> Docker Best Practice
-The assignment recommends using minimal base images and a .dockerignore file to exclude
-unnecessary files. This helps keep Docker images lightweight and can improve build and deployment
-speed.
-
--> Conclusion
-Week 4 provided practical experience with Docker containerization and Docker Compose. The activities
-helped build an understanding of images, containers, volumes, networks and multi-container
-applications. These fundamentals provide a useful foundation for future work involving Kubernetes,
-CI/CD pipelines and cloud-native deployments.
+/Info 9 0 R
+/Root 8 0 R
+/Size 14
+>>
+startxref
+7204
+%%EOF
