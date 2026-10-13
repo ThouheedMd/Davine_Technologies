@@ -1,12 +1,82 @@
-➢ Install Minikube or Kind.
-➢ Start a local Kubernetes cluster.
-➢ Create and manage Pods.
-➢ Create a Deployment for a sample application.
-➢ Scale the Deployment to multiple replicas.
-➢ Create a Service to expose the application.
-➢ Create a ConfigMap.
-➢ Create a Secret.
-➢ Create a Namespace.
-➢ Practice important kubectl commands.
-➢ Explore basic Helm concepts.
-➢ Explore basic Ingress concepts. 
+WEEK 7 - WEEKLY TASK: Kubernetes & Container Orchestration
+============================================================
+
+1.  Install Minikube or Kind (and kubectl)
+    # kubectl
+    curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+    sudo install kubectl /usr/local/bin/
+    # Minikube
+    curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+    sudo install minikube-linux-amd64 /usr/local/bin/minikube
+    kubectl version --client
+
+2.  Start a local Kubernetes cluster
+    minikube start --driver=docker
+    kubectl cluster-info
+    kubectl get nodes
+    (Kind alternative: kind create cluster --name devops)
+
+3.  Create a Namespace
+    kubectl apply -f namespace.yaml
+    kubectl get namespaces
+
+4.  Create and manage Pods
+    kubectl apply -f pod.yaml
+    kubectl get pods -n devops-task -o wide
+    kubectl describe pod nginx-pod -n devops-task
+    kubectl logs nginx-pod -n devops-task
+    kubectl exec -it nginx-pod -n devops-task -- sh
+    kubectl delete pod nginx-pod -n devops-task
+
+5.  Create a ConfigMap and a Secret (before the Deployment that uses them)
+    kubectl apply -f configmap.yaml
+    kubectl apply -f secret.yaml
+    kubectl get configmap,secret -n devops-task
+    kubectl describe configmap web-config -n devops-task
+    kubectl get secret web-secret -n devops-task -o yaml        # values are base64
+    echo "<base64-value>" | base64 -d
+
+6.  Create a Deployment for a sample application
+    kubectl apply -f deployment.yaml
+    kubectl get deployment,pods -n devops-task
+    kubectl rollout status deployment/web-app -n devops-task
+
+7.  Scale the Deployment to multiple replicas
+    kubectl scale deployment/web-app --replicas=4 -n devops-task
+    kubectl get pods -n devops-task
+    kubectl scale deployment/web-app --replicas=2 -n devops-task
+
+8.  Create a Service to expose the application
+    kubectl apply -f service.yaml
+    kubectl get svc -n devops-task
+    minikube service web-service -n devops-task --url
+    (or) kubectl port-forward svc/web-service 8080:80 -n devops-task  -> http://localhost:8080
+
+9.  Practice important kubectl commands
+    kubectl get all -n devops-task
+    kubectl describe deployment web-app -n devops-task
+    kubectl logs deployment/web-app -n devops-task
+    kubectl get events -n devops-task --sort-by=.metadata.creationTimestamp
+    kubectl get pods -n devops-task --show-labels
+    kubectl top pods -n devops-task        (needs: minikube addons enable metrics-server)
+    kubectl delete -f deployment.yaml
+
+10. Explore basic Helm concepts
+    Helm = package manager for Kubernetes. A chart bundles templates + values.
+    curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+    helm version
+    helm install demo ./helm-chart -n devops-task
+    helm list -n devops-task
+    helm upgrade demo ./helm-chart -n devops-task --set replicaCount=3
+    helm uninstall demo -n devops-task
+    helm template demo ./helm-chart      # preview the rendered YAML
+
+11. Explore basic Ingress concepts
+    minikube addons enable ingress
+    kubectl apply -f ingress.yaml
+    kubectl get ingress -n devops-task
+    Add to /etc/hosts:  <minikube ip>  devops.local
+    curl http://devops.local
+
+CLEAN UP
+    kubectl delete namespace devops-task

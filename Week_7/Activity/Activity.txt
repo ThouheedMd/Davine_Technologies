@@ -1,10 +1,80 @@
-➢ Deploy the application using a Deployment.
-➢ Run at least 3 replicas.
-➢ Expose the application using a Service.
-➢ Scale the application up and down.
-➢ Perform a rolling update by changing the application version.
-➢ Check the status of the rollout.
-➢ Roll back the Deployment to the previous version.
-➢ Use a separate Namespace for the application.
-➢ Draw the deployment flow:
-    User → Service → Deployment → Pods → Container
+WEEK 7 - HANDS-ON ACTIVITY: Highly Available Web Application on Kubernetes
+===========================================================================
+Scenario: DevOps Engineer deploying a web application that stays available
+even when additional replicas are required.
+
+DEPLOYMENT FLOW
+---------------
+User -> Service -> Deployment -> Pods -> Container   (see deployment-flow-diagram.png)
+
+Run everything in one go, with pauses for screenshots:   ./demo.sh
+Or follow the steps below.
+
+STEPS AND COMMANDS (all in the separate namespace "devops-app")
+---------------------------------------------------------------
+1. Use a separate Namespace for the application
+   kubectl apply -f k8s/namespace.yaml
+
+2. Deploy the application using a Deployment with 3 replicas
+   kubectl apply -f k8s/deployment.yaml
+   kubectl rollout status deployment/web-app -n devops-app
+   kubectl get deployment,pods -n devops-app -o wide        # 3/3 READY
+
+3. Expose the application using a Service
+   kubectl apply -f k8s/service.yaml
+   kubectl get svc -n devops-app
+   minikube service web-service -n devops-app --url
+   (or) kubectl port-forward svc/web-service 8080:80 -n devops-app
+
+4. Scale the application up and down
+   kubectl scale deployment/web-app --replicas=5 -n devops-app
+   kubectl get pods -n devops-app          # 5 pods
+   kubectl scale deployment/web-app --replicas=2 -n devops-app
+   kubectl get pods -n devops-app          # extra pods terminating
+   kubectl scale deployment/web-app --replicas=3 -n devops-app
+
+5. Perform a rolling update by changing the application version
+   kubectl set image deployment/web-app web=nginx:1.27-alpine -n devops-app
+   kubectl annotate deployment/web-app -n devops-app kubernetes.io/change-cause="Update to nginx 1.27-alpine" --overwrite
+   (in a second terminal: kubectl get pods -n devops-app -w)
+
+6. Check the status of the rollout
+   kubectl rollout status deployment/web-app -n devops-app
+   kubectl rollout history deployment/web-app -n devops-app
+   kubectl describe deployment web-app -n devops-app | grep Image
+
+7. Roll back the Deployment to the previous version
+   kubectl rollout undo deployment/web-app -n devops-app
+   kubectl rollout status deployment/web-app -n devops-app
+   kubectl describe deployment web-app -n devops-app | grep Image    # nginx:1.25-alpine again
+
+8. Application access
+   curl $(minikube service web-service -n devops-app --url)
+
+CLEAN UP
+   kubectl delete namespace devops-app
+
+WHAT HAPPENED DURING SCALING AND ROLLBACK
+-----------------------------------------
+Scaling: changing replicas made the Deployment's ReplicaSet create or remove pods
+until the number of running pods matched the desired count (3 -> 5 -> 2 -> 3).
+The Service sent traffic only to ready pods, so the application stayed available.
+
+Rolling update: changing the image created a new ReplicaSet. With maxSurge 1 and
+maxUnavailable 0, Kubernetes started one new pod, waited for it to become ready,
+then removed one old pod, repeating until all 3 pods ran the new version with no
+downtime.
+
+Rollback: kubectl rollout undo scaled the previous ReplicaSet back up and the new
+one down, returning all pods to the earlier image. Kubernetes keeps this history
+(revisionHistoryLimit: 5), which makes rollbacks fast and safe.
+
+IMPLEMENTATION SUMMARY
+----------------------
+Created a separate namespace (devops-app) and deployed a web application with a
+Deployment running 3 replicas, exposed through a NodePort Service. Scaled the
+Deployment up to 5 and down to 2 replicas, then back to 3. Performed a rolling
+update from nginx 1.25-alpine to 1.27-alpine with zero downtime and checked the
+rollout status and history. Rolled back to the previous version with
+kubectl rollout undo and confirmed the application was reachable through the
+Service throughout.

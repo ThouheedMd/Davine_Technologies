@@ -1,0 +1,10 @@
+replicaCount: 2
+
+image:
+  repository: nginx
+  tag: 1.25-alpine
+
+service:
+  type: NodePort
+  port: 80
+  nodePort: 30081

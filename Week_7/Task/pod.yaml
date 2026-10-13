@@ -1,0 +1,14 @@
+# A single Pod (not managed by a Deployment: if it dies, it is not recreated)
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  namespace: devops-task
+  labels:
+    app: nginx-pod
+spec:
+  containers:
+    - name: nginx
+      image: nginx:1.25-alpine
+      ports:
+        - containerPort: 80

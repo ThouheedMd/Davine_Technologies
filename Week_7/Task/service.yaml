@@ -1,0 +1,14 @@
+# Exposes the Deployment's pods. NodePort makes it reachable from outside the cluster.
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-service
+  namespace: devops-task
+spec:
+  type: NodePort
+  selector:
+    app: web-app
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30080
