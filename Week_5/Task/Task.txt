@@ -1,21 +1,62 @@
-➢ Install and configure Jenkins.
-➢ Explore the Jenkins Dashboard.
-➢ Connect Jenkins with GitHub.
-➢ Configure Jenkins Credentials securely.
-➢ Create a Freestyle Project that pulls code from GitHub.
-➢ Configure an automated build trigger.
-➢ Create a Declarative Pipeline.
-➢ Write a Jenkinsfile.
-➢ Create pipeline stages for:
-    o Checkout o Build o Test
-➢ Execute the pipeline and analyze the build logs.
-➢ Configure basic GitHub Webhook integration.
-➢ Prepare a short PDF explaining:
-    o CI/CD
-    o Jenkins Architecture
-    o Freestyle Jobs
-    o Declarative Pipelines
-    o Jenkinsfile
-    o GitHub Webhooks
-    o Jenkins Credentials
-    o Pipeline Stages
+WEEK 5 - WEEKLY TASK: Jenkins, CI/CD & GitHub Integration
+==========================================================
+
+1.  Install and configure Jenkins (Ubuntu)
+    sudo apt update
+    sudo apt install -y fontconfig openjdk-17-jre
+    # Add the Jenkins apt repository (see https://www.jenkins.io/doc/book/installing/linux/)
+    sudo apt install -y jenkins
+    sudo systemctl enable --now jenkins
+    sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+    Open http://localhost:8080 -> unlock -> Install suggested plugins -> create admin user
+    Install Node.js on the Jenkins machine:  sudo apt install -y nodejs npm
+
+2.  Explore the Jenkins Dashboard
+    New Item, Build History, Manage Jenkins, Credentials, Plugins, Nodes.
+
+3.  Connect Jenkins with GitHub
+    Manage Jenkins -> Plugins -> install "GitHub" and "Git" plugins (usually preinstalled).
+
+4.  Configure Jenkins Credentials securely
+    Manage Jenkins -> Credentials -> System -> Global -> Add Credentials
+      Kind: Username with password  (username = GitHub user, password = Personal Access Token)
+      ID: github-pat
+    Never put tokens in the Jenkinsfile or the repository.
+
+5.  Create a Freestyle Project that pulls code from GitHub
+    New Item -> "freestyle-week5" -> Freestyle project
+    Source Code Management -> Git
+      Repository URL: https://github.com/<your-username>/<your-repo>.git
+      Credentials: github-pat      Branch: */main
+    Build Steps -> Execute shell:
+      npm run build
+      npm test
+    Save -> Build Now
+
+6.  Configure an automated build trigger
+    Build Triggers -> "GitHub hook trigger for GITScm polling"
+    (Alternative: "Poll SCM" with schedule  H/5 * * * *)
+
+7.  Create a Declarative Pipeline
+    New Item -> "pipeline-week5" -> Pipeline
+    Definition: "Pipeline script from SCM" -> Git -> same repo -> Script Path: Jenkinsfile
+
+8.  Write a Jenkinsfile
+    jenkins-app/Jenkinsfile (final) and Task/Jenkinsfile.basic (Checkout, Build, Test)
+
+9.  Pipeline stages: Checkout, Build, Test (see the Jenkinsfile)
+
+10. Execute the pipeline and analyze the build logs
+    Build Now -> open the build -> Console Output
+    Read each stage's output; Stage View shows timing and failures.
+
+11. Configure basic GitHub Webhook integration
+    GitHub repo -> Settings -> Webhooks -> Add webhook
+      Payload URL: http://<jenkins-public-url>:8080/github-webhook/
+      Content type: application/json     Event: Just the push event
+    Local Jenkins is not reachable from GitHub. Use a tunnel such as ngrok:
+      ngrok http 8080   ->   use the https URL + /github-webhook/
+
+12. PDF report
+    Task/Report.pdf (CI/CD, Jenkins architecture, freestyle jobs, declarative
+    pipelines, Jenkinsfile, GitHub webhooks, credentials, pipeline stages).

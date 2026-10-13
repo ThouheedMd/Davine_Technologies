@@ -1,88 +1,118 @@
-DevOps Internship - Week 5 Report
+%PDF-1.4
+%���� ReportLab Generated PDF document (opensource)
+1 0 obj
+<<
+/F1 2 0 R /F2 3 0 R /F3 4 0 R
+>>
+endobj
+2 0 obj
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
+endobj
+3 0 obj
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
+endobj
+4 0 obj
+<<
+/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+>>
+endobj
+5 0 obj
+<<
+/Contents 11 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 10 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
 
-Topic :  Jenkins, CI/CD & GitHub Integration
+>> 
+  /Type /Page
+>>
+endobj
+6 0 obj
+<<
+/Contents 12 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 10 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
 
--> Introduction
-Week 5 focuses on Jenkins, CI/CD and GitHub Integration. The learning areas include Jenkins
-fundamentals and architecture, installation and configuration, jobs and builds, credentials, GitHub
-integration, Freestyle Projects, Declarative Pipelines, Jenkinsfile, pipeline stages, build triggers, GitHub
-Webhooks, build and test automation, troubleshooting and CI/CD best practices. The learning approach
-emphasizes understanding how code moves through a CI/CD pipeline and using AI as an assistant
-rather than a replacement for understanding.
+>> 
+  /Type /Page
+>>
+endobj
+7 0 obj
+<<
+/Contents 13 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 10 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
 
--> Objectives
-The objectives of this week were to understand Jenkins and CI/CD concepts, install and configure
-Jenkins, connect Jenkins with GitHub, configure credentials securely, create Jenkins jobs and pipelines,
-automate builds, analyze build logs and understand how webhooks can trigger automated workflows.
+>> 
+  /Type /Page
+>>
+endobj
+8 0 obj
+<<
+/PageMode /UseNone /Pages 10 0 R /Type /Catalog
+>>
+endobj
+9 0 obj
+<<
+/Author (\(anonymous\)) /CreationDate (D:20261001083425+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261001083425+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (\(unspecified\)) /Title (Week 5 Report) /Trapped /False
+>>
+endobj
+10 0 obj
+<<
+/Count 3 /Kids [ 5 0 R 6 0 R 7 0 R ] /Type /Pages
+>>
+endobj
+11 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 1797
+>>
+stream
+Gatm;gMYb*&:O:Sbf_W/_GO"KP,qqsJM^-6$.<\E]%`Racn]GgQ:Q_*iYpI1h]X:7;LM+M'L<AT,\PD-cL?Y*&:]N7)eT.hVf;?i!-)GY!&ARa0YN%\C%%`cWh"_,"HaW8#_U2A;%V]shP\%+7cDgNLRpk<io>[O]&C^Xi-:s]O!9\/*]bT!*7G<N\DUO!k3i`jJ*cse3&7OUk^R)Y%6f/O\WHXjVY;cm"/jsL#l<!N>]/'.eT"?CF#")mLlfahYlJT<L]QT36Te%crlZV[Y8L[p>RfWNlKhs]^Vfq:s'<k,MJKYb<%!8VBKKO\TI$-[*q[/oO9TeE"S"UppVT%M'DD2U<u.=eC6dlL+&(m._AQ$M]](+MbCli!ETd*/`'a!<@g!s#7:V!n@h?ChN';7(ACi4?_[;,'b<?9U\sJ[O%n#AcBR`]]0*Kl501;MfV1cJ[`RWe$ok[QD:\>l@PUi--8!]%&8VLNm-%f=D)([%[-lCS#(+>dWmZC_0=-Va"6iemHaO#0*dr\fLe=RIIWpP8[P\0Lf-ipjmZ]o$G7\X$_(i**J>6cWCFVnuf':'ubjk5=KWRtg=`'c?5'*\99)4rG+/&X;\^iU\C$C4VYnE%IF'=g\n?'-[L<7r#"@MNo;TjS]=G6?ldM%n`qE*t/]%/3?"GmbKqZR:f+/G-qM3NpfIJtauVBqPhr@2pL#7Q&/D36uf#+#T;Zm8gNHO;JSH];:\alEYV<`%/IGK;d`BAi@gF%B$+R_-7kGq)$&]m>$1*R`qaCB4#,,epMO3j#+eJS'PXLm)KWg-X+S$n9qMCs-M-QFeBXRE%^0NU04Q*aaPFX/TMqE&_USimEkJca&ZXH</Er]m&BB7;i4-t0l1BP"lYP^\>G>:Jb,G@Nj5^_85gjZHM=S7fabPS!>Vfj]L\HBHSNF[X>&&H9J]-Rag.iND)t7j`(&FGrHe/"N`3##f4p@6NpKg1O*tY\Tp[cGRpB1*DM28IBnI9*KqtD`TWo326'>(r")#c-G6O%#)C9]FZ;jd7fs=9BC'RY.(/%?e*_^hU%&tgk!4PO[o\jTd'+qEBDB-/ST-+Lm`WE)1OKD4dWTD#eZK&d<8[JQ(iP:@f<fmt!NY3dnO+kjeI@-+)kX<-(#2hq@c5m4fV88"g4"_F?6e=.Q2ogY_(jQ_%qiKa,1^5c8hK2lS?n?TWeLqJZV4XMN-U/5,(E?(t0G_=C*H1;*?Xs$j-L3AW+S9#l\&43#J6uaa"6E(,-VBX<Z_RNcQ0j)3XcA(sLG/@LDAWXln.-0"q;>T<i'U((A2)Pg*3.sQ:(NYk,Op$+Mqq[mJK]K::p2SP,o%?b?irL$>!ZRY=$be('QfKYlTplMf_;M=9@&Cd$Ie0Z'IHDH`0>,M"Y,%s2;IrVkJaU<iS[`sNIR\S?>b.R8A'-M.[gf=+1qiZMBJVP23t0h<F:$4=95r;`ARYOpRKTSUCe!Z0FUDorZ;dd#5F5N*o@iCo/&M7ApBcb'Y`4r@=)G8q0L]If\1A]:t/X))H3?a?GNIb_&p'$n>Ta`K(]70eI//l7dZ]WY:P?XnFTP0qfGBVG_,V4A<hqZ[q$le[s7jWj)fZT:jKuD,cEj"\=hR+7#c884h/Phg:=O'oe`19;!=/Y`H#N;>V48[C^*?@rrJBGZS*q39u,B,2e>KOb2_%.aT*5j?pos>a`<6A4G3@?`3Yeq.T.d_VPoZ:NEdl[>"p-?G>S-@B`mju8E.%n!%Q*2%*%'YBMi!(Hgd7a*ja:4DC&fk*mSd'iNkP!D[8ZIRD&PrO?i8an8r!W~>endstream
+endobj
+12 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 1994
+>>
+stream
+Gatm<D0+Dj&H88.Yoe8om0&'$NT8g<c*\g6dd(.P+MA<+c&Jq2G-NW#P!bX2rqihY(JFm%88h%N/SX*d+77($*e$f]f1uD'9q_C?"OhtE*),+k@Ia`M-V*'Tbjsi11'X?3RG^-/@<r"dl#>B2/^qNP_m3P%0u<(cQ=G9W(IuQqXMq\'8Pk'DVP?O]Q4hQQ%61,39K80^%>@ZDd5Xat!0RO/6OFoL\r9NAO(.r(-Jr5%7VVN!5J&c<Gn&$,`:ki0hpc7P6[MF`T)S3_[,6IIY8,Pkm9P%'B.EI1"B>.YR\@Sjfi?+&$H('Tn-h(tHn*JS!Bpl>6n+3&1@AAuA1](e1f/;8]!B#oBuWPo>AKV7/%(V'+UXXO2W.J",iFDt&[@Q)a2$q66s!oRROP-Y"3uMRO)Vpc$#2%;c[D4&WX,qgj_ZT4/8-MoJYk@<B5+)IKZ$jk\&F"!VO;rr\2smo:r8dnFLW=FXMa_SLsnBE$'CAT,P:k1'q=SMRZ:Gp;BJ#lW^Rur:`DYMN^g2kCQ_2G"Zclg?:6QmB;8^be+WDkgbhi,ju&II`G)qA%&q!P\SNE$e>D,T?`o$sK"B^r[ip3e7r_@%D@qd<>%s9&cVp4q1OE7uW/rll*A"#?hb3p5`)2%fbu2MjS(d)+CsJj?h@uld+i=,XRa4%EpUlaf3q%!<qB:LBpj+n^+-0Y#e<uLK<[h)jHiNg1e+M8eC#MM)k#A9_qOG_[Q`WCXghl0*Xpj%dKV*lHa/EDH`]??XB"7.FSn#;5Yg%VqrlID3#/fcc,0KXrY@f<S.?\s>YkoL,e2*e.Sm\8/r687WCs\lsqJCIH>V<t]/t@B!PdsdPg5`jYQp&Ko9^>-;7leWNGQb@hE=ZYb<Sl1C^OZ-,.fE2]\6q>kB`Zt0c4]m`abtQ?Lb4&D?u[(jSi5X5S;/Z;n3R/qb@4@-Bk+%-/Voh/I`*MT4BSfhVPc"l!TP][R,jFhm=7-i_Dh"c7M'E?NVtC3auSMZ$PWJaYj`*04sO59F$K[J3@Wr5:9irrkE3@K<C\2$R\`3Gl9ZXC^1_<eYtcV@EK%"i7almbrYg1u7(YS]&V%P9)6RIp2StI>%Vurr:JB4X3,nQLaDbNeJPWS&++/uTX>dT=\!MH2F,^jFfsk(("5g*fa)5eQ>IDj#1cOp+g-B=fCuAO&iH[itPQoZZWPFjK%7oAn?4VB$Nftr/-1pI<Z@+`7NCDP"W)U]K`L*70l5^/i[oc+&L=*)kg#BTEn%LlN`=2&G$W=s4_2P]H9oE1L.J@_BYa`m#e&DT+7<n<\euEZgIm*YD-ijnYU9frdjWjFuagY$8I@[l234'?+'k/8,aH7ASi*nGZJPY9M7f;?sp>Anmg&\c<Af806_Zl/;:&&^>Lqq/!@MjM7:NXu-Uk!!`UW^@kLjYjh[qH^BV,H+S>,bn2oU$"k(:1h92M3DLBFnU<`,!nLU]1$E-UOYh,"!1i8nAm')Jn+FM\4b\RRs:OB?Eht'LAl?q+>+ZUEq^=P5(_gqAV@1?2t-,0oI7uY-1$g)hNUae!.k[3:,Nh2,C"U9LcgV"3aUTUW[2>$(N]@&U_';E*qM[e^^;B60r^?m5gK&c>St*SW8`frJ7BcPrmK:h6j4CH`CS_)DfL](66!5b7Hr[LQRD2cR9j`lb@P#h'=$OO.s9O"NJ,sR8a0=?uq(4K5O[^)%g>sG^ujTnHCK.)PaCS<P2(*T<C%nl/"&q^G]bh3D/GZEkiB^*-i9/EWWR)>b:3=F00F;+_"T5\hRD'Z[W"*.ir-UUpqZ&rI5&[p?n<*%Cd05kZ0,f_GQAjR(dKsWFV_((8q#5/2KCl3T(dCD;*:oRD!ZL?")#:P%*/E3u=-Z,b^u2SS?!^i\EKI<gi+gOfdZG@B(OM8pI.H*m];Fq"K)^IapK^c.h*FI/`1(:RhFb;+"`4ndVuHLdd*JKLlNEPaOMuG$gLc:L@,_^D@4p5"iIZKrtc8JW$Wn',hkh#O"PD3W~>endstream
+endobj
+13 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 1750
+>>
+stream
+Gatm<=a/R\&:Vs/R((Kbi`]YBmX<7+^$"6/V9MY>KIsFf7BRnko'\ZGYq]s3!k3rKJ0]IWc-/,=7)6eQWW,IK_"eCF^EYu`Qn<i5Q3X`Ln90!Go7UqOS2f(FF@$%[+'9eYK_QT@>Jq[K%P5X,4J./c#*//++I=H(PB:O@R,t9`!TG%5Naic^VA=QP7BB6Q!G@PWpKXoZ^cT]F9!U1qUo<Dn;i)'S(X"O<1F9>!F&BT'fcA:C)&p?Mk:o%=[qDUE00ch$9H1=bF1^tT2X:cPClV-:;_@fcaWue<j<_uo_-k6)!Xhjs:ms#)K%n[A_P1"/H48sOcXJ`$.3/8Y)3:c%p@]f6W.IPqW_q>68>)VrRUrTCVm^0kKS2$`_<>5<1[@d:/^')C[0-l_+;0Bo,0NdaP7hFDRG?$*<J6S-2+.a&QFKpC^+-VsNJ>)B^j_P"17IZG<\[]IOb40J^r0ssY`7d0Fu'E*d!('JDCasAI6'+A"tR'#&u-LoU$\67/^/#*drRlM"e3:Vm]f0FYBE7ZgN)K'<.em='K*?/>.>;$\k8o1HaA=V^?#ph.*4CSeW=/i=Ma"qGmD6dp8I1LVE\qk&[G+@2CSt@<5[^FH3m`PN_2;mL%BAL[?+=T@Z%f[qtT:Mp"KL;Z-3_:B"*qqG1[h<>Q6E((SX0>@.7O"b6iYn`!ZHg;$[UT`V3,Y`prF%M\3]=k`p[mb3)Hu(ZVYdhS<Y11t!,`hR$mTHjaOXZ]>s+HLiC4gUbQrKU'2fOJ+)o]'9LncT-CQY&W>AU=F<_r!;gO;BTR65RCbI7]25%LiGR/66M/T9o+Iepr`!I!H6f3SUDF<[s<"mF9Gc6!o'c,p7ef6?#DeG6WpD,'SVt.ZiO)pdQBsl@&m#4@,D"oHeS]rWmhe**hqmHr4>%q!oF;IKZbL*GQE7hd?KIufC)Kd+''D,k$.U;_[O9096Pg$hO1g!&,%'t,A?B8=)cYA9IB]A*461Bc@WZ65]lHFR;NeWYR-@FU&EeNn9&*Yp8?kV@htaA(E[!k>f+$Ch^aNubp0+Z-</U\4P,"1U\!mQg$"7X+5Z6?cKm3E?t.diG.M1Zh^%N=@`EdY=Q3u5b.=$*Yp/:`>$s.$_$*\8.'A9ZYB9*T&\<H7\0I"fjCFG0F1.gqKfUhFi92jjGeF'DDN6j]o?CZqd\6ll\@LN1B2/9e28<"J*)HGP*o?e?V+B8DV[I[o,^N7]"CWcI!noE]Tb`-2qq$cb3;T9YcPc<0cHhV`Vm7e05o.hYILN(4^REC33p%7f"#+e2SX3O@6d=n8L#4S2;)CX\Y72Ljdi:"0fY@j=BsrMh4&:o6I"`GtnhI##VR>PIhBqtPYoJYh&IdX1lFNZdV6gQ;=?q`+O_9C=#b<&7%5"f%(lRQ69#p.p6?`SRU>^n!N>eJTVQRAh9.S4#F'<o[ljhTkM35tLM;SM0VVu1,UU5+6&VUJ:#Cj5Kqt;i16hfL[qTomDgg,fsDOCYO44M+UT-PHVc@YL*9feBe2$#FtGD"K;]sP\`a^:e``3p*P79QIYF\1Qg:L@#Xp-*XkEPkn9L\T+C#QM7^CDaX[.8pZse;*unjLMf2&;Jr/1SD920H"fs'jAE<XuO!sNt/P[CO"1uLMFO,!Q13<R-(]bG!M]X*=gD\FM[H+A?'=bmu8?D:pO0BX+WtLE)hP]*7+$FN<g"TI?u-MR2j--$BJg'6X@+0R$F(AkD4GTZ)XW5kb>W_=Q-\:lbUlaa_uQC\i0~>endstream
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000000061 00000 n 
+0000000112 00000 n 
+0000000219 00000 n 
+0000000331 00000 n 
+0000000436 00000 n 
+0000000641 00000 n 
+0000000846 00000 n 
+0000001051 00000 n 
+0000001120 00000 n 
+0000001400 00000 n 
+0000001472 00000 n 
+0000003361 00000 n 
+0000005447 00000 n 
+trailer
+<<
+/ID 
+[<26110ebd468449152edd04267a29c35b><26110ebd468449152edd04267a29c35b>]
+% ReportLab generated PDF document -- digest (opensource)
 
--> What is CI/CD?
-CI/CD is a core DevOps practice that automates software delivery. In a CI pipeline, code changes are
-validated continuously through automated stages such as checkout, build and testing. Jenkins is used to
-help teams build, test and validate applications continuously.
-
--> Jenkins Architecture
-Jenkins is an automation server used to create and execute build and CI/CD workflows. Users configure
-jobs or pipelines through Jenkins, and Jenkins executes the configured stages. During troubleshooting,
-Jenkins Console Output is useful for understanding why a build failed.
-
--> Jenkins Installation and Configuration
-The weekly task requires installing and configuring Jenkins and exploring the Jenkins Dashboard. After
-installation, Jenkins should be configured for the required jobs and pipeline activities.
-
--> Jenkins Jobs and Freestyle Projects
-A Jenkins job defines work that Jenkins should perform. The weekly task requires creating a Freestyle
-Project that pulls application code from GitHub. Freestyle Projects provide a simple way to configure
-source code, build steps and triggers through the Jenkins interface.
-
--> Jenkins Credentials
-Jenkins Credentials are used to securely manage information required for integrations and access. The
-weekly task specifically requires configuring Jenkins Credentials securely before connecting Jenkins
-workflows with external services such as GitHub.
-
--> GitHub Integration
-Jenkins can be connected with a GitHub repository so that Jenkins can retrieve application code and
-perform automated validation. The Week 5 task requires connecting Jenkins with GitHub and creating a
-project that pulls code from GitHub.
-
--> Declarative Pipeline
-A Declarative Pipeline defines an automated workflow using clearly organized stages. The weekly task
-requires creating a Declarative Pipeline and executing it while analyzing the build logs.
-
--> Jenkinsfile
-A Jenkinsfile stores the pipeline definition as code. The assignment requires writing a Jenkinsfile and
-understanding every stage of the pipeline. This allows the CI workflow to be maintained together with the
-application project.
-
--> Pipeline Stages
-The weekly task requires pipeline stages for Checkout, Build and Test. The hands-on activity additionally
-requires a Validation stage. Separating the pipeline into stages makes it easier to understand where a
-failure occurs and to analyze the results.
-
--> GitHub Webhooks
-A GitHub Webhook can notify Jenkins when changes occur in a repository. The weekly task requires
-basic GitHub Webhook integration, while the hands-on activity requires pushing a new change and
-verifying that Jenkins automatically starts the pipeline.
-
--> Hands-on CI Pipeline
-The hands-on scenario is based on developers continuously pushing code to GitHub while a Junior
-DevOps Engineer creates a CI pipeline to automatically validate every change. The required pipeline
-stages are Checkout, Build, Test and Validation. The repository is connected to Jenkins and a GitHub
-Webhook is configured to trigger automated pipeline execution.
-
--> Failure and Troubleshooting
-The hands-on activity requires introducing a controlled error into the project, observing the failed Jenkins
-build, analyzing the Console Output, identifying the issue, fixing it and running the pipeline again. The
-complete failure, troubleshooting and resolution process should be documented.
-
--> Testing and Verification
-The Jenkins installation and dashboard should be verified. GitHub integration and credentials should be
-checked, and the pipeline should be executed through its stages. A GitHub change should trigger an
-automated build through the configured webhook. Both failed and successful pipeline runs should be
-observed, and the Console Output should be reviewed to identify the root cause of failures.
-
--> Conclusion
-Week 5 provided practical exposure to Jenkins, CI/CD automation and GitHub integration. The work
-demonstrated how code changes can move through automated pipeline stages and how Jenkins can
-provide useful feedback when builds fail. The troubleshooting activity also emphasized reading logs,
-identifying root causes, fixing issues and verifying the pipeline again. These activities support the
-DevOps mindset of automating, troubleshooting and improving delivery workflows.
+/Info 9 0 R
+/Root 8 0 R
+/Size 14
+>>
+startxref
+7289
+%%EOF

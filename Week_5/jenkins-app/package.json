@@ -1,0 +1,12 @@
+{
+  "name": "jenkins-sample-app",
+  "version": "1.0.0",
+  "description": "Sample Node.js app for the Week 5 Jenkins CI/CD pipeline",
+  "main": "app.js",
+  "scripts": {
+    "build": "node --check app.js && echo Build OK",
+    "test": "node --test",
+    "start": "node app.js"
+  },
+  "license": "ISC"
+}

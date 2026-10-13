@@ -1,0 +1,63 @@
+// Declarative pipeline: Checkout -> Build -> Test -> Validation
+pipeline {
+    agent any
+
+    options {
+        timestamps()
+        timeout(time: 10, unit: 'MINUTES')
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+    }
+
+    triggers {
+        // Starts the pipeline when GitHub sends a push webhook
+        githubPush()
+    }
+
+    environment {
+        APP_NAME = 'jenkins-sample-app'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Checking out source code from GitHub...'
+                checkout scm
+                sh 'git log -1 --pretty="Commit: %h - %s (%an)"'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo "Building ${APP_NAME}..."
+                sh 'node --version && npm --version'
+                sh 'npm run build'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running automated tests...'
+                sh 'npm test'
+            }
+        }
+
+        stage('Validation') {
+            steps {
+                echo 'Running quality and security validation...'
+                sh './scripts/validate.sh'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo "SUCCESS: pipeline for ${APP_NAME} completed."
+        }
+        failure {
+            echo "FAILURE: check the Console Output to find the failing stage."
+        }
+        always {
+            echo "Build #${env.BUILD_NUMBER} finished with status: ${currentBuild.currentResult}"
+        }
+    }
+}

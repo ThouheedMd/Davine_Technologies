@@ -1,15 +1,63 @@
-➢ Create a GitHub repository for the application.
-➢ Connect the repository with Jenkins.
-➢ Configure a GitHub Webhook.
-➢ Create a Jenkins Pipeline with separate stages:
-    o Checkout
-    o Build
-    o Test
-    o Validation
-➢ Push a new change to GitHub.
-➢ Verify that Jenkins automatically starts the pipeline.
-➢ Introduce a controlled error into the project.
-➢ Observe the failed Jenkins build.
-➢ Analyze the Console Output to identify the issue.
-➢ Fix the error and run the pipeline again.
-➢ Document the complete failure → troubleshooting → resolution process. 
+WEEK 5 - HANDS-ON ACTIVITY: CI Pipeline That Validates Every Change
+====================================================================
+Scenario: Junior DevOps Engineer creating a CI pipeline that automatically
+validates every change pushed to GitHub.
+
+STEPS AND COMMANDS
+------------------
+1. Create a GitHub repository for the application
+   Push the contents of jenkins-app/ (app.js, test/, package.json, scripts/,
+   Jenkinsfile, README.md, .gitignore).
+     git init && git add . && git commit -m "Initial commit: sample app and Jenkinsfile"
+     git remote add origin https://github.com//jenkins-sample-app.git
+     git push -u origin main
+
+2. Connect the repository with Jenkins
+   New Item -> Pipeline -> Pipeline script from SCM -> Git -> repo URL,
+   credentials github-pat, branch */main, Script Path: Jenkinsfile.
+
+3. Configure a GitHub Webhook
+   GitHub -> Settings -> Webhooks -> Payload URL: <jenkins-url>/github-webhook/
+   Content type application/json, event: push.
+   A green tick appears next to the webhook after a successful delivery.
+
+4. Pipeline with separate stages (Jenkinsfile)
+   Checkout -> Build -> Test -> Validation
+   Validation runs scripts/validate.sh (required files, hard-coded secret scan,
+   shell syntax check, dependency audit warning).
+
+5. Push a new change to GitHub
+   echo "// v2" >> app.js
+   git commit -am "feat: small change to trigger pipeline" && git push
+
+6. Verify that Jenkins automatically starts the pipeline
+   The build starts within seconds; the console shows "Started by GitHub push".
+
+7. Introduce a controlled error
+   sed -i 's/add(2, 3), 5/add(2, 3), 6/' test/app.test.js
+   git commit -am "test: introduce controlled failure" && git push
+
+8. Observe the failed Jenkins build
+   Test stage turns red; Validation is skipped; post { failure } runs.
+
+9. Analyze the Console Output
+   Look for:  not ok 1 - add() adds two numbers   expected: 6   actual: 5
+   See Troubleshooting.md for the full walkthrough.
+
+10. Fix the error and run the pipeline again
+    sed -i 's/add(2, 3), 6/add(2, 3), 5/' test/app.test.js
+    git commit -am "fix: correct expected value in add() test" && git push
+    All four stages turn green.
+
+11. Document failure -> troubleshooting -> resolution
+    Activity/Troubleshooting.md
+
+IMPLEMENTATION SUMMARY
+----------------------
+Created a GitHub repository for a small Node.js application and connected it to
+Jenkins with a declarative pipeline that has four stages: Checkout, Build, Test
+and Validation. Configured a GitHub webhook so every push starts the pipeline
+automatically. Pushed a change and confirmed Jenkins triggered the build, then
+introduced a controlled error by changing a test's expected value. The Test
+stage failed; the Console Output showed the failing assertion (expected 6,
+actual 5). Fixed the test, pushed again and the pipeline passed all stages.
