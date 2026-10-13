@@ -1,13 +1,74 @@
-➢ Use Terraform to provision the required infrastructure.
-➢ Use Ansible to configure the provisioned server.
-➢ Configure the server with:
-    o Required packages
-    o Application user
-    o Web server
-    o Required service configuration
-➢ Run the Ansible Playbook against the provisioned server.
-➢ Verify that the server is configured correctly.
-➢ Make one configuration change through Ansible and apply it again.
-➢ Verify that the change is applied without manually configuring the server.
-➢ Draw a simple workflow:
-    Terraform → Infrastructure → Ansible → Server Configuration → Application
+WEEK 6 - HANDS-ON ACTIVITY: Terraform + Ansible Application Server
+====================================================================
+Scenario: DevOps Engineer preparing a new application server. The environment
+must be created consistently and configured automatically, not by hand.
+
+ARCHITECTURE
+------------
+Terraform --> Infrastructure --> Ansible --> Server Configuration --> Application
+(Docker container "week6-server" with SSH, configured with Nginx over SSH.)
+See workflow-diagram.png.
+
+STEPS AND COMMANDS
+------------------
+Prerequisites: Docker (Week 4), Terraform and Ansible (this week).
+
+1. Use Terraform to provision the infrastructure
+   cd Activity/terraform
+   terraform init
+   terraform plan
+   terraform apply
+   Terraform creates: an SSH key pair, the server image, the server container
+   (SSH on port 2222, HTTP on port 8081) and ansible/inventory.ini.
+   terraform output
+
+2. Check that the server is reachable
+   ssh -i ../ansible/.ssh/id_ed25519 -p 2222 ansible@127.0.0.1
+   cd ../ansible && ansible webservers -m ping
+
+3. Use Ansible to configure the provisioned server
+   ansible-playbook playbook.yml
+   The playbook installs: nginx, curl, htop, vim
+                  creates: group appgroup and user appuser
+                  deploys: the website to /var/www/devops-app
+                  configures: Nginx site (server_tokens off), starts Nginx
+
+4. Verify the server is configured correctly
+   Open http://localhost:8081
+   curl http://localhost:8081
+   ansible webservers -m command -a "id appuser"
+   ansible webservers -m command -a "nginx -t" -b
+
+5. Make ONE configuration change through Ansible and apply it again
+   Edit ansible/group_vars/all.yml:
+     welcome_message: "Updated through Ansible - no manual server changes"
+   ansible-playbook playbook.yml
+   Only the website task reports "changed" and Nginx is reloaded.
+
+6. Verify the change was applied without logging in to configure the server
+   curl http://localhost:8081      -> shows the new message
+   Run the playbook once more: changed=0 (idempotent).
+
+7. Workflow diagram
+   Activity/workflow-diagram.png
+
+8. Clean up
+   cd ../terraform && terraform destroy
+
+HOW TERRAFORM AND ANSIBLE WORKED TOGETHER
+-----------------------------------------
+Terraform provisioned the infrastructure: it built the server image, started the
+container, generated an SSH key and wrote the Ansible inventory from its own
+values. Ansible then used that inventory to connect over SSH and configure the
+server: packages, application user, web server and service configuration. Changing
+one variable and re-running the playbook updated only the website, showing that
+the configuration is repeatable and needs no manual work on the server.
+
+IMPLEMENTATION SUMMARY
+----------------------
+Used Terraform to provision a Docker-based server with SSH access and to generate
+the Ansible inventory. Ran an Ansible playbook that installed packages, created
+an application user, deployed a website and configured and started Nginx.
+Verified the result in the browser and with curl. Changed one variable
+(welcome_message), re-ran the playbook and confirmed the change was applied
+automatically, then confirmed a second run made no changes.

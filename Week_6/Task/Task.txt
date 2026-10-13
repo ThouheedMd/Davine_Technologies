@@ -1,25 +1,58 @@
-➢ Install Terraform and Ansible.
-➢ Configure a Terraform provider.
-➢ Create a basic Terraform configuration.
-➢ Use variables and outputs.
-➢ Practice:
-    o terraform init
-    o terraform plan
-    o terraform apply
-    o terraform destroy
-➢ Understand Terraform state.
-➢ Create a basic Ansible inventory.
-➢ Create an Ansible Playbook.
-➢ Use Ansible to:
-    o Install a package Create a user Start a service
-➢ Document the difference between Terraform and Ansible.
-➢ Prepare a short PDF explaining:
-    o Infrastructure as Code
-    o Terraform
-    o Terraform State
-    o Variables & Outputs
-    o Modules
-    o Ansible
-    o Inventory
-    o Playbooks
-    o Terraform vs Ansible
+WEEK 6 - WEEKLY TASK: Infrastructure as Code & Configuration Management
+========================================================================
+
+1.  Install Terraform and Ansible (Ubuntu / WSL)
+    # Terraform (HashiCorp apt repository)
+    wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp.gpg
+    echo "deb [signed-by=/usr/share/keyrings/hashicorp.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+    sudo apt update && sudo apt install -y terraform
+    terraform -version
+    # Ansible
+    sudo apt install -y ansible
+    ansible --version
+
+2.  Configure a Terraform provider
+    Task/terraform/main.tf  ->  provider "local" {} (hashicorp/local)
+
+3.  Create a basic Terraform configuration
+    local_file.welcome plus a module that creates one .conf file per application
+
+4.  Use variables and outputs
+    variables.tf, terraform.tfvars, outputs.tf
+
+5.  Practice the Terraform workflow
+    cd Task/terraform
+    terraform init        # download providers, set up the backend
+    terraform fmt         # format the code
+    terraform validate    # check the syntax
+    terraform plan        # preview: shows what will be created
+    terraform apply       # create the resources (type yes)
+    terraform output      # show outputs
+    terraform destroy     # remove everything (type yes)
+
+6.  Understand Terraform state
+    terraform state list
+    terraform state show local_file.welcome
+    The state file (terraform.tfstate) maps your code to real resources.
+    It can contain secrets: never commit it (see .gitignore).
+
+7.  Create a basic Ansible inventory
+    Task/ansible/inventory.ini
+
+8.  Create an Ansible Playbook
+    Task/ansible/playbook.yml
+
+9.  Use Ansible to install a package, create a user, start a service
+    cd Task/ansible
+    ansible all -m ping
+    ansible-playbook playbook.yml --check      # dry run
+    ansible-playbook playbook.yml
+    Verify:  which htop   |   id devopsuser   |   systemctl status cron
+    (WSL without systemd: change service_name or enable systemd in /etc/wsl.conf)
+
+10. Document the difference between Terraform and Ansible
+    See Task/Report.pdf and the table in README.md
+
+11. PDF report
+    Task/Report.pdf (IaC, Terraform, state, variables and outputs, modules,
+    Ansible, inventory, playbooks, Terraform vs Ansible).

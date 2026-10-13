@@ -1,0 +1,34 @@
+---
+# Weekly task: install a package, create a user, start a service
+- name: Basic server configuration
+  hosts: local
+  become: true
+
+  vars:
+    package_name: htop
+    new_user: devopsuser
+    service_name: cron
+
+  tasks:
+    - name: Update apt cache
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 3600
+
+    - name: Install a package
+      ansible.builtin.apt:
+        name: "{{ package_name }}"
+        state: present
+
+    - name: Create a user
+      ansible.builtin.user:
+        name: "{{ new_user }}"
+        shell: /bin/bash
+        create_home: true
+        state: present
+
+    - name: Start and enable a service
+      ansible.builtin.service:
+        name: "{{ service_name }}"
+        state: started
+        enabled: true

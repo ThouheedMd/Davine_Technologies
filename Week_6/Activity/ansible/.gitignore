@@ -1,0 +1,3 @@
+.ssh/
+inventory.ini
+*.retry

@@ -1,0 +1,15 @@
+---
+# Change these values and re-run the playbook to apply a configuration change.
+required_packages:
+  - nginx
+  - curl
+  - htop
+  - vim
+
+app_user: appuser
+app_group: appgroup
+app_dir: /opt/devops-app
+web_root: /var/www/devops-app
+
+welcome_message: "Server configured by Ansible after provisioning with Terraform"
+nginx_server_tokens: "off"

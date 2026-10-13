@@ -1,0 +1,101 @@
+---
+# Activity: configure the server that Terraform provisioned.
+- name: Configure the application server
+  hosts: webservers
+  become: true
+  gather_facts: true
+
+  tasks:
+    - name: Update apt cache
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 3600
+
+    - name: Install required packages
+      ansible.builtin.apt:
+        name: "{{ required_packages }}"
+        state: present
+
+    - name: Create the application group
+      ansible.builtin.group:
+        name: "{{ app_group }}"
+        state: present
+
+    - name: Create the application user
+      ansible.builtin.user:
+        name: "{{ app_user }}"
+        group: "{{ app_group }}"
+        shell: /bin/bash
+        create_home: true
+        state: present
+
+    - name: Create application and web directories
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        owner: "{{ app_user }}"
+        group: "{{ app_group }}"
+        mode: "0755"
+      loop:
+        - "{{ app_dir }}"
+        - "{{ web_root }}"
+
+    - name: Deploy the website
+      ansible.builtin.template:
+        src: index.html.j2
+        dest: "{{ web_root }}/index.html"
+        owner: "{{ app_user }}"
+        group: "{{ app_group }}"
+        mode: "0644"
+
+    - name: Configure the Nginx site
+      ansible.builtin.template:
+        src: nginx-site.conf.j2
+        dest: /etc/nginx/sites-available/devops-app
+        mode: "0644"
+      notify: Reload Nginx
+
+    - name: Enable the Nginx site
+      ansible.builtin.file:
+        src: /etc/nginx/sites-available/devops-app
+        dest: /etc/nginx/sites-enabled/devops-app
+        state: link
+      notify: Reload Nginx
+
+    - name: Disable the default Nginx site
+      ansible.builtin.file:
+        path: /etc/nginx/sites-enabled/default
+        state: absent
+      notify: Reload Nginx
+
+    - name: Validate the Nginx configuration
+      ansible.builtin.command: nginx -t
+      changed_when: false
+
+    # "use: service" is needed because the container has no systemd
+    - name: Start the Nginx service
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        use: service
+
+    - name: Verify the website responds
+      ansible.builtin.uri:
+        url: http://localhost
+        return_content: true
+        status_code: 200
+      register: site_check
+      retries: 5
+      delay: 2
+      until: site_check.status == 200
+
+    - name: Show the verification result
+      ansible.builtin.debug:
+        msg: "HTTP {{ site_check.status }} - page contains welcome message: {{ welcome_message in site_check.content }}"
+
+  handlers:
+    - name: Reload Nginx
+      ansible.builtin.service:
+        name: nginx
+        state: reloaded
+        use: service
